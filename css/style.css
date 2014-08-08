@@ -1,4 +1,4 @@
-/*html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td,
@@ -26,27 +26,46 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
-}
-*/
+} 
 
 /* init */
-body { background:#ccc; color:white;}
+body { background:; color:white;}
 
 /* layout */
-#header { padding:10px; position:fixed; background:white; width:100%; top:0; left:0; margin:0;}
+#header { padding:10px; position:fixed; background:white; width:100%; top:0; left:0; margin:0; z-index:10;}
 	#header .menu { margin:0 auto; width:1000px; }
 	#header .menu li { float:left; padding:10px;}
 	#header .expend-menu { float:right; }
 	#header .menu:after { content:""; clear:both; display:block;  }
-#contents { width:1000px; margin:0 auto; padding-top:60px; }
-	#contents #aboutme {}	
+
+#contents { padding-top:90px; }
+	#contents #profile { background:#000; position:relative;  }	
+		#contents #profile .skewline-top { background:white; transform:skewY(179deg); width:100%; top:-18px; display:block; position:absolute; height:30px;}
+		#contents #profile .skewline-bottom {background:white; transform:skewY(179deg); width:100%; bottom:-16px; position:absolute; height:30px;}
+		#contents #profile .column-2-1 { float:left; width:40%; margin-left:10%; margin-top:20px; margin-bottom:20px;  }		
+		#contents #profile .column-2-2 { float:left; width:40%; margin-right:10%; margin-top:20px; margin-bottom:20px;  } 
+	#contents #profile:after { content:""; clear:both; display:block; }	 
+		#contents #profile .aboutme { }
+		#contents #profile .Skills { }
+		#contents #profile .loveit { }
 	#contents #works {}	
 	#contents #contactme {}	
+
 #footer {}
+
+/* fixed layout */
+
 
 
 /* typo*/
-body { font-family: 'Nanum Gothic', serif;}
+body { font-family: 'Nanum Gothic', serif; }
+h3 { padding:5px 0; margin-top:20px;  }
+
+/* style */
+h3+p { padding-left:15px; margin:10px; line-height:1.5em; }
+ul { margin:10px; padding-left:15px;  }
+ul li { margin:10px 0;  }
+ul.list-disc { list-style:disc; }
 
 
 
