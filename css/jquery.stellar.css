@@ -1,0 +1,130 @@
+#qunit-fixture {
+  position: static;
+  height: 4000px;
+  width: 4000px;
+}
+
+#qunit-fixture span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
+  visibility: hidden;
+}
+
+#position-fixed span {
+  position: fixed;
+}
+
+#background-attachment-fixed span {
+  background-attachment: fixed;
+}
+
+#background-vertical-only span {
+  background-position: 100% 0px;
+}
+
+#background-horizontal-only span {
+  background-position: 0px 100%;
+}
+
+.offset-parent {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.default-offset-parent {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.custom-offsets {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+#scroll-property-transform {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+
+
+
+
+html, body{
+    width: 100%;
+    height: 100%;
+}
+#navigation{
+    width: 100%;
+    height: 100%;
+    float: left;
+}
+#navBar{
+    width: 50px;
+    height: 165px;
+    position: fixed;
+    top: 50%;
+    right: 0;
+    margin-top: -82.5px;
+    z-index:1;
+    list-style: none;
+}
+#navBar li{
+    width: 15px;
+    height: 15px;
+    background-color: ghostwhite;
+    border: 5px solid ghostwhite;
+    margin: 12.5px;
+    cursor: pointer;
+    border-radius: 20px;
+    transition-duration: 0.7s;
+    -webkit-transition-duration: 0.7s;
+}
+#navBar li:hover, #navBar .current{
+    transition-duration: 0.7s;
+    -webkit-transition-duration: 0.7s;
+    background-color: transparent;
+}
+
+.slide{
+    background-attachment: fixed;
+    width:100%;
+    height:100%;
+    position: relative;
+}
+  
+.button{
+    display:block;
+    width:50px;
+    height:50px;
+    position:absolute;
+    bottom:0px;
+    left:50%;
+    margin-left: -25px;
+    background-color: transparent;
+    background-image:url(img/arrow.png);
+    background-repeat:no-repeat;
+    background-position: center center;
+    transition-duration: 0.7s;
+    -webkit-transition-duration: 0.7s; /* Safari */
+}
+.button:hover{
+    background-color: rgba(255,255,255,0.6);
+    cursor:pointer;
+    transition-duration: 0.7s;
+    -webkit-transition-duration: 0.7s; /* Safari */
+}
+.button.last{
+    transform:rotate(180deg);
+    -ms-transform:rotate(180deg); /* IE 9 */
+    -webkit-transform:rotate(180deg); /* Safari and Chrome */
+}
+
+
