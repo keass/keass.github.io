@@ -28,19 +28,18 @@ table {
 	border-spacing: 0;
 } 
 
-/* init */
-body { background:; color:white;}
+/* init */ 
 
 /* layout */
 #header { padding:10px; position:fixed; background:white; width:100%; top:0; left:0; margin:0; z-index:10;}
-	#header .menu { margin:0 auto; width:1000px; }
+	#header .menu { margin:0 auto; width:1000px; text-align:center; margin:0 auto; }
 	#header .menu li { float:left; padding:10px;}
 	#header .expend-menu { float:right; }
 	#header .menu:after { content:""; clear:both; display:block;  }
 
 #contents { padding-top:90px; }
 	#contents #profile { background:#000; position:relative;  }	
-		#contents #profile .skewline-top { background:white; transform:skewY(179deg); width:100%; top:-18px; display:block; position:absolute; height:30px;}
+		#contents #profile .skewline-top { background:white; transform:skewY(179deg); width:100%; top:-10px; display:block; position:absolute; height:30px;}
 		#contents #profile .skewline-bottom {background:white; transform:skewY(179deg); width:100%; bottom:-16px; position:absolute; height:30px;}
 		#contents #profile .column-2-1 { float:left; width:40%; margin-left:10%; margin-top:20px; margin-bottom:20px;  }		
 		#contents #profile .column-2-2 { float:left; width:40%; margin-right:10%; margin-top:20px; margin-bottom:20px;  } 
@@ -48,10 +47,10 @@ body { background:; color:white;}
 		#contents #profile .aboutme { }
 		#contents #profile .Skills { }
 		#contents #profile .loveit { }
-	#contents #works {}	
-	#contents #contactme {}	
+	#contents #works { width:80%; margin:30px auto 0; }	
+	#contents #contactme { margin-top:30px; width:100%; padding:30px 10%; background:black; color:white;}	
 
-#footer {}
+#footer { border-top:1px solid #eee; background:black; color:white; padding: 10px 10%; font-size:0.8em; text-align:center;}
 
 /* fixed layout */
 
@@ -59,7 +58,10 @@ body { background:; color:white;}
 
 /* typo*/
 body { font-family: 'Nanum Gothic', serif; }
-h3 { padding:5px 0; margin-top:20px;  }
+h3 { font:bold 20px/20px arial; padding:10px 0 20px;   }
+#contents #profile h3 { position:absolute; top:-10px; left:10%; color:black; z-index:9; }
+h4 { padding:5px 0; margin-top:20px; font:bold 16px/20px arial; }
+#contents #profile { color:white; }
 
 /* style */
 h3+p { padding-left:15px; margin:10px; line-height:1.5em; }
@@ -71,4 +73,4 @@ ul.list-disc { list-style:disc; }
 
 
 
-.works-timeline { width:80%; margin:0 auto; }
+.works-timeline { width:100%; margin:0 auto; }
