@@ -30,6 +30,63 @@
 </div>
 
 <div id="contents">
+	
+	<div class="headers"
+		data-center="transform:translate3d(0px, 0px, 0);"
+		data-top="transform:translate3d(0px,100px, 0);"
+	>
+		<h3>profile</h3>
+	</div>
+
+
+	<div class="profile-bg"
+		data-50-start="transform:rotate(0deg) translate3d(0px, 00px, 0); " 
+		data-200-start="transform:rotate(-1deg) translate3d(0px, -100px, 0); " 
+		></div>
+	<div id="profile"
+		data-50-start="transform:translate3d(0px, 00px, 0); " 
+		data-200-start="transform:translate3d(0px, -100px, 0); " 
+	>
+			<div id="textbox1" class="column-2-1" 
+			 data-80-start="transform:translate3d(0px, 200px, 0)" 
+			 data-150-start="transform:translate3d(0px,0px,0)"
+			>
+				<div class="aboutme">
+					<h4>about me</h4>
+					<ul>
+						<li>하동수 </li>
+						<li>1986/06/15 </li>
+						<li>마산 > 부산 > 서울 </li>
+					</ul>
+					</div>
+
+					<div class="loveit">
+					<h4>love it</h4>
+					<p>console game, swimming, surfing, comicbooks, drawing, SFmovies</p>
+				</div>
+								
+			
+			</div>
+
+			<div id="textbox2" class="column-2-2" 
+			 data-110-start="transform:translate3d(0px, 200px, 0)" 
+			 data-150-start="transform:translate3d(0px,0px,0)"
+			>
+				<div class="Skills">
+				<h4>Skills</h4>
+				<ul class="list-disc">
+					<li>html/css ++++</li>
+					<li>javascript +</li>
+					<li>design ++</li>
+					<li>photoshop +++</li>
+					<li>illustrator +++</li>  
+				</ul>
+				</div>
+			</div>
+	
+	</div><!-- // end : wrapper-up-inner -->
+
+<!--
 <div id="profile">
 	<h3>profile</h3>
 	<div class="skewline-top"></div>
@@ -66,9 +123,15 @@
 	<div class="skewline-bottom"></div>
 	
 </div><!--#profile-->
-	
+
 <div id="works">
-	<h3>works</h3>
+	<div class="headers"
+		data-center="transform:translate3d(0px, 0px, 0);"
+		data-top="transform:translate3d(0px,100px, 0);"
+	>
+		<h3>Works</h3>
+	</div>
+
 		<div class="works-timeline">
 		<iframe src="timeline.html" width="100%" height="500" frameborder="0"></iframe>
 		</div>
@@ -76,19 +139,33 @@
 	 
 
 <div id="contactme">
-		<h3>contact me</h3>
+
+	<div class="headers"
+		data-center="transform:translate3d(0px, 0px, 0);"
+		data-top="transform:translate3d(0px,100px, 0);"
+	>
+		<h3>Contact Me</h3>
+	</div>
+	<div class="contactme-inner">
 		010-8615-7021<Br />
 		keass9@gmail.com<Br />
 		https://github.com/keass<Br />
+	</div>
 </div><!--#contactme-->
 
+
+</div><!--#contents-->
 <div id="footer">
 	The World Dongsoo | copyright by dongsoo 2014
 	
 </div><!--#footer--> 
-</div><!--#contents-->
-
 		<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 		<script src="js/scripts.js"></script>
+
+		<script type="text/javascript" src="js/skrollr.js"></script>
+		<script type="text/javascript">
+		  var s = skrollr.init();
+		</script>
+
 </body>
 </html>
