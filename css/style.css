@@ -43,17 +43,19 @@ table {
 		#contents #profile .skewline-bottom {background:white; transform:skewY(179deg); width:100%; bottom:-16px; position:absolute; height:30px;}
 */		
 	#contents .profile-bg { margin-top:100px; height:230px; width:100%; background:black; }
-	#contents #profile { width:100%; height:200px; margin-top:-230px; }
-		#contents .headers h3 { margin:140px auto; }
+	#contents #profile { width:100%; height:200px; margin-top:-230px; padding-top:30px; }
+		#contents .headers h3 { margin:200px auto; }
 		#contents #profile .column-2-1 { float:left; width:40%; margin-left:10%; margin-top:20px; margin-bottom:20px;  }		
 		#contents #profile .column-2-2 { float:left; width:40%; margin-right:10%; margin-top:20px; margin-bottom:20px;  } 
 	#contents #profile:after { content:""; clear:both; display:block; }	 
 		#contents #profile .aboutme { }
 		#contents #profile .Skills { }
 		#contents #profile .loveit { }
-	#contents #works { width:80%; margin:30px auto 0; }	
+	#contents #works { width:100%; margin:30px auto 0; border-top:1px solid ; }	
 	#contents #contactme { width:100%;}	
-	#contents .contactme-inner { background:black; color:white; padding:30px;  }
+	#contents .contactme-inner { background:black; color:white; padding:30px 10%; height:200px;	 }
+		#contents .contactme-inner span { float:left; display:block; width:50%; }
+		#contents .contactme-inner div { float:left; width:200px; height:200px; padding-left:20px; margin-left:20px;  line-height:1.3em; border-left:1px solid #666;  }
 
 #footer { border-top:1px solid #eee; background:black; color:white; padding: 10px 10%; font-size:0.8em; text-align:center;}
 
@@ -79,4 +81,4 @@ ul.list-disc { list-style:disc; }
 
 
 
-.works-timeline { width:100%; margin:0 auto; }
+.works-timeline { background:black; margin:0 auto;  }

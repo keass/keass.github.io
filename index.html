@@ -26,30 +26,29 @@
 		<li><a href="#works">works</a></li>
 		<li><a href="#contactme">contact me</a></li>
 	</ul>
-	<div class="expend-menu">ㅁ</div>
 </div>
 
 <div id="contents">
 	
 	<div class="headers"
 		data-center="transform:translate3d(0px, 0px, 0);"
-		data-top="transform:translate3d(0px,100px, 0);"
+		data-top="transform:translate3d(0px,170px, 0);"
 	>
 		<h3>profile</h3>
 	</div>
-
-
 	<div class="profile-bg"
-		data-50-start="transform:rotate(0deg) translate3d(0px, 00px, 0); " 
-		data-200-start="transform:rotate(-1deg) translate3d(0px, -100px, 0); " 
+		data-bottom="transform:rotate(0deg) translate3d(0px, 00px, 0); " 
+		data--100-center="transform:rotate(-1deg) translate3d(0px, -100px, 0); " 
 		></div>
 	<div id="profile"
-		data-50-start="transform:translate3d(0px, 00px, 0); " 
-		data-200-start="transform:translate3d(0px, -100px, 0); " 
+		data-bottom="transform:translate3d(0px, 00px, 0); " 
+		data--100-center="transform:translate3d(0px, -100px, 0); " 
 	>
 			<div id="textbox1" class="column-2-1" 
-			 data-80-start="transform:translate3d(0px, 200px, 0)" 
-			 data-150-start="transform:translate3d(0px,0px,0)"
+			 data-bottom="transform:translate3d(0px, 250px, 0)" 
+			 data-100-center="transform:translate3d(0px,-40px,0)"
+			 data-100-top="transform:translate3d(0px,-20px,0)"
+			 data-90-top="transform:translate3d(0px,-100px,0)"
 			>
 				<div class="aboutme">
 					<h4>about me</h4>
@@ -69,8 +68,10 @@
 			</div>
 
 			<div id="textbox2" class="column-2-2" 
-			 data-110-start="transform:translate3d(0px, 200px, 0)" 
-			 data-150-start="transform:translate3d(0px,0px,0)"
+			 data-bottom="transform:translate3d(0px, 250px, 0)" 
+			 data-100-center="transform:translate3d(0px,-40px,0)"
+			 data-140-top="transform:translate3d(0px,-20px,0)"
+			 data-130-top="transform:translate3d(0px,-100px,0)"
 			>
 				<div class="Skills">
 				<h4>Skills</h4>
@@ -86,43 +87,6 @@
 	
 	</div><!-- // end : wrapper-up-inner -->
 
-<!--
-<div id="profile">
-	<h3>profile</h3>
-	<div class="skewline-top"></div>
-	
-	<div class="column-2-1">
-		<div class="aboutme">
-		<h4>about me</h4>
-		<ul>
-			<li>하동수 </li>
-			<li>1986/06/15 </li>
-			<li>마산 > 부산 > 서울 </li>
-		</div>
-
-		<div class="loveit">
-			<h4>love it</h4>
-				<p>console game, swimming, surfing, comicbooks, drawing, SFmovies</p>
-		</div>
-		
-
-	</div>
-
-	<div class="column-2-2">
-		<div class="Skills">
-		<h4>Skills</h4>
-		<ul class="list-disc">
-			<li>html/css ++++</li>
-			<li>javascript +</li>
-			<li>design ++</li>
-			<li>photoshop +++</li>
-			<li>illustrator +++</li>  
-		</ul>
-		</div>
-	</div>
-	<div class="skewline-bottom"></div>
-	
-</div><!--#profile-->
 
 <div id="works">
 	<div class="headers"
@@ -132,7 +96,10 @@
 		<h3>Works</h3>
 	</div>
 
-		<div class="works-timeline">
+		<div class="works-timeline"
+			data-100-bottom="transform:translate3d(0,0,0); width:100%;"
+			data-50-bottom="transform:translate3d(0,-100px,0); width:80%;"
+		>
 		<iframe src="timeline.html" width="100%" height="500" frameborder="0"></iframe>
 		</div>
 </div><!--#works-->
@@ -147,9 +114,19 @@
 		<h3>Contact Me</h3>
 	</div>
 	<div class="contactme-inner">
-		010-8615-7021<Br />
+	
+		<span>하동수</span>
+
+		<div>010-8615-7021<Br />
 		keass9@gmail.com<Br />
-		https://github.com/keass<Br />
+		<a href="https://github.com/keass" target="_blank">https://github.com/keass</a>
+		</div>
+		
+		<div>phone<br />e-mail<br />github</div>
+
+		
+		
+		</div>
 	</div>
 </div><!--#contactme-->
 
