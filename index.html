@@ -19,6 +19,7 @@
 
 <body> 
 
+
 <div id="header">
 	<ul class="menu">
 		<li><a href="#">home</a></li>
@@ -87,6 +88,7 @@
 	
 	</div><!-- // end : wrapper-up-inner -->
 
+<a href="#" class="scrolltopto">Scroll</a>
 
 <div id="works">
 	<div class="headers"
@@ -103,7 +105,7 @@
 		<iframe src="timeline.html" width="100%" height="500" frameborder="0"></iframe>
 		</div>
 </div><!--#works-->
-	 
+<a href="#" class="scrolltopto">Scroll</a>	 
 
 <div id="contactme">
 
@@ -142,6 +144,15 @@
 		<script type="text/javascript" src="js/skrollr.js"></script>
 		<script type="text/javascript">
 		  var s = skrollr.init();
+
+		  $(document).ready(function () {
+			$('.scrolltopto').click(function () {
+				$("html, body").animate({
+					scrollTop: 0
+				}, 300);
+				return false;
+			});
+		});
 		</script>
 
 </body>
