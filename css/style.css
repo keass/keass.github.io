@@ -51,7 +51,7 @@ table {
 		#contents #profile .aboutme { }
 		#contents #profile .Skills { }
 		#contents #profile .loveit { }
-	#contents #works { width:100%; margin:30px auto 0; border-top:1px solid ; }	
+	#contents #works { width:100%; margin:30px auto 0; }	
 	#contents #contactme { width:100%;}	
 	#contents .contactme-inner { background:black; color:white; padding:30px 10%; height:200px;	 }
 		#contents .contactme-inner span { float:left; display:block; width:50%; }
