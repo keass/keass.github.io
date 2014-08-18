@@ -247,10 +247,11 @@ section, footer, header{
 }
 
 #timeline .slider-item:nth-child(1) .media-container {
-	left: -30px;
+	left: 120px; /*-30px*/
 	position: relative;
 	z-index: 1;
 }
+
 
 #timeline .slider-item:nth-child(1) .credit{
 	text-align: center;
