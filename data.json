@@ -80,6 +80,17 @@
                     "caption":"스마투스 매거진 사이트"
                 }
             },
+	     {
+                "startDate":"2012,6",
+                "headline":"BeNATIVE site making",
+                "text":"비네이티브 사이트 제작<br /><a href='http://www.benative.co.kr/'>Benative Korea</a>",
+                "asset":
+                {
+                    "media":"assets/img/img_ss_benative.jpg",
+                    "credit":"",
+                    "caption":"비네이티브 사이트"
+                }
+            },
             {
                 "startDate":"2013,01",
                 "headline":"work in KAIST Seoul",
