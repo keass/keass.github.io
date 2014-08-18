@@ -210,6 +210,11 @@ section, footer, header{
 #timeline .slider-item iframe{
 	border:none;
 }
+#timeline .slider-item:first-child img {
+	border-radius:50%;
+	border:5px solid #fff;
+	width:200px;
+}
 
 /* Customizing the first slide - the cover */
 
