@@ -90,6 +90,28 @@
                     "credit":"",
                     "caption":"KAIST 경영대학"
                 }
+            },
+	     {
+              "startDate":"2013,05",
+                "headline":"KAIST Green Growth Promotion",
+                "text":"KAIST 경영대학 녹색성장대학원 홍보페이지<br /><a href='http://www.business.kaist.ac.kr/gsgg/overview'>KAIST Green Growth overview</a>",
+                "asset":
+                {
+                    "media":"assets/img/img_ss_gsggover.jpg",
+                    "credit":"",
+                    "caption":"KAIST 녹색성장대학원 홍보페이지"
+                }
+            },
+	     {
+              "startDate":"2013,07",
+                "headline":"KAIST Green Growth Site making",
+                "text":"KAIST 경영대학 녹색성장대학원 사이트 제작<br /><a href='http://www.business.kaist.ac.kr/gsgg/'>KAIST Green Growth</a>",
+                "asset":
+                {
+                    "media":"assets/img/img_ss_gsgg.jpg",
+                    "credit":"",
+                    "caption":"KAIST 녹색성장대학원"
+                }
             }
         ]
     }
