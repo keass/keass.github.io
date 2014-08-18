@@ -17,44 +17,44 @@
             {
                 "startDate":"2009,6",
                 "headline":"MBC TV animation <bobble bobble cook>",
-                "text":"플래시 기반 TV 애니메이션 19화 제작 참여",
+                "text":"플래시 기반 TV 애니메이션 19화 제작 참여 <br /><a href='http://goo.gl/0efF6K'>MBC 상세 페이지</a>",
                 "asset":
                 {
                     "media":"http://www.youtube.com/watch?v=9FK2kkGxIrA&list=PL424170AE419E7230",
-                    "credit":"<a href='http://goo.gl/0efF6K'>MBC 상세 페이지</a>",
-                    "caption":"보글보글 쿡 시즌1 19화 제작"
+                    "credit":"",
+                    "caption":"보글보글 쿡 시즌1 19화 제작 clip"
                 }
             },
             {
-                "startDate":"2009,5",
-                "headline":"Redesign of my portfolio",
+                "startDate":"2011,4",
+                "headline":"Work in Smatoos",
                 "text":"",
                 "asset":
                 {
-                    "media":"assets/img/shots/sidebar_s3.jpg",
-                    "credit":"<a href='http://dribbble.com/shots/401334-Sidebar'>by Chris Brauckmuller</a>",
-                    "caption":""
-                }
-            },
-            {
-                "startDate":"2009,7",
-                "headline":"Another time-lapse experiment",
-                "text":"",
-                "asset":
-                {
-                    "media":"http://vimeo.com/23237102",
+                    "media":"",
                     "credit":"",
                     "caption":""
                 }
             },
             {
-                "startDate":"2009,10",
-                "headline":"Developed a Gmail Client",
-                "text":"",
+                "startDate":"2011,4",
+                "headline":"project : ETOOS site making",
+                "text":"이투스 사이트 제작",
                 "asset":
                 {
-                    "media":"assets/img/shots/shot_1298590416.jpg",
-                    "credit":"<a href='http://dribbble.com/shots/120088-Gmail-Pokki-Final-Ui'>by Justalab</a>",
+                    "media":"",
+                    "credit":"",
+                    "caption":""
+                }
+            },
+            {
+                "startDate":"2011/05",
+                "headline":"project : LOFFICIEL HOMME site making",
+                "text":"로피시엘 옴므 코리아 사이트 제작",
+                "asset":
+                {
+                    "media":"assets/img/img_ss_lofi.jpg",
+                    "credit":"<a href='www.lofficielhomme.co.kr'>lofficiel homme korea</a>",
                     "caption":""
                 }
             },
