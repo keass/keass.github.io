@@ -31,7 +31,7 @@
                 "text":"",
                 "asset":
                 {
-                    "media":"",
+                    "media":"assets/img/img_ss_smts_logo.jpg",
                     "credit":"",
                     "caption":""
                 }
@@ -59,46 +59,35 @@
                 }
             },
             {
-                "startDate":"2010,3",
-                "headline":"Logo Design for a pet shop",
-                "text":"",
+                "startDate":"2011,07",
+                "headline":"project : KT&G CS site making",
+                "text":"인삼공사 정관장고객응대팀 사이트 제작",
                 "asset":
                 {
-                    "media":"assets/img/shots/pet___you.jpg",
-                    "credit":"<a href='http://dribbble.com/shots/444003-Pet-You'>by Nikita Lebedev</a>",
-                    "caption":""
-                }
-            },
-            {
-                "startDate":"2010,4",
-                "headline":"Developed an iPad newspaper application",
-                "text":"It was a challenge to create both the design and code in a week.",
-                "asset":
-                {
-                    "media":"assets/img/shots/proto_v4_decoupe_2.jpg",
-                    "credit":"<a href='http://dribbble.com/shots/228267-Swiss-newspaper-reader-app-for-iPad-UI-UX-iOS'>by Jonathan Moreira</a>",
-                    "caption":""
-                }
-            },
-            {
-                "startDate":"2010,8",
-                "headline":"Illustration for a big client.",
-                "text":"",
-                "asset":
-                {
-                    "media":"assets/img/shots/chameleon.jpg",
-                    "credit":"<a href='http://dribbble.com/shots/366400-Chameleon'>Chameleon by Mike</a>",
-                    "caption":""
-                }
-            },
-            {
-                "startDate":"2010,12",
-                "headline":"Advert for Volkswagen",
-                "text":"Created the website for their new advertising campaign.",
-                "asset":
-                {
-                    "media":"http://www.youtube.com/watch?v=0-9EYFJ4Clo",
+                    "media":" ",
                     "credit":"",
+                    "caption":""
+                }
+            },
+            {
+                "startDate":"2011,10",
+                "headline":"project : SMATOOS site making",
+                "text":"스마투스 교육용 매거진 사이트 제작",
+                "asset":
+                {
+                    "media":"assets/img/img_ss_smatoos.jpg",
+                    "credit":"<a href='http://www.smatoos.com/'>smatoos korea</a>",
+                    "caption":""
+                }
+            },
+            {
+                "startDate":"2013,01",
+                "headline":"work in KAIST Seoul",
+                "text":"KAIST 경영대학 파견근무 - 사이트 관리",
+                "asset":
+                {
+                    "media":"assets/img/img_ss_kaist.jpg",
+                    "credit":"<a href='http://www.business.kaist.ac.kr/'>KAIST seoul</a>",
                     "caption":""
                 }
             }
