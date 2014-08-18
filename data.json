@@ -6,11 +6,11 @@
         "type":"default",
 	"start_at_slide":2,
 		"startDate":"2009,6",
-		"text":"<i><span class='c1'>Designer</span> & <span class='c2'>Developer</span></i>",
+		"text":"<i><span class='c1'>Front-End Developer</span> & <span class='c2'>Designer</span></i>",
 		"asset":
         {
-            "media":"assets/img/notes.png",
-            "credit":"<a href='http://dribbble.com/shots/221641-iOS-Icon'>iOS Icon by Asher</a>",
+            "media":"https://fbcdn-sphotos-g-a.akamaihd.net/hphotos-ak-frc3/t1.0-9/1003729_584367251615618_1658912038_n.jpg",
+            "credit":"",
             "caption":""
         },
         "date": [
