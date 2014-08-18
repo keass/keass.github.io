@@ -53,9 +53,9 @@
                 "text":"로피시엘 옴므 코리아 사이트 제작",
                 "asset":
                 {
-                    "media":"assets/img/img_ss_lofi.jpg",
-                    "credit":"<a href='www.lofficielhomme.co.kr'>lofficiel homme korea</a>",
-                    "caption":""
+                    "media":"<a href='www.lofficielhomme.co.kr'>assets/img/img_ss_lofi.jpg</a>",
+                    "credit":"",
+                    "caption":"로피시엘 옴므 코리아"
                 }
             },
             {
