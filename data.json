@@ -17,7 +17,7 @@
             {
                 "startDate":"2009,6",
                 "headline":"MBC TV animation <bobble bobble cook>",
-                "text":"플래시 기반 TV 애니메이션 19화 제작 참여 <br /><a href='http://goo.gl/0efF6K'>MBC 상세 페이지</a>",
+                "text":"플래시 애니메이션 19화 제작 참여 <br /><a href='http://goo.gl/0efF6K'>MBC 상세 페이지</a>",
                 "asset":
                 {
                     "media":"http://www.youtube.com/watch?v=9FK2kkGxIrA&list=PL424170AE419E7230",
@@ -28,7 +28,7 @@
             {
                 "startDate":"2011,4",
                 "headline":"Work in Smatoos",
-                "text":"(주)스마투스 재직",
+                "text":"스마투스 근무 <br />Design, CSS",
                 "asset":
                 {
                     "media":"assets/img/img_ss_smts_logo.jpg",
@@ -38,7 +38,7 @@
             },
             {
                 "startDate":"2011,4",
-                "headline":"project : ETOOS site making",
+                "headline":"ETOOS site making",
                 "text":"이투스 사이트 제작",
                 "asset":
                 {
@@ -49,8 +49,8 @@
             },
             {
                 "startDate":"2011/05",
-                "headline":"project : LOFFICIEL HOMME site making",
-                "text":"로피시엘 옴므 코리아 사이트 제작<br /><a href='www.lofficielhomme.co.kr'>lofficiel homme korea</a>",
+                "headline":"LOFFICIEL HOMME site making",
+                "text":"로피시엘 옴므 코리아 사이트 제작<br /><a href='www.lofficielhomme.co.kr'>Lofficiel Homme Korea</a>",
                 "asset":
                 {
                     "media":"assets/img/img_ss_lofi.jpg",
@@ -60,7 +60,7 @@
             },
             {
                 "startDate":"2011,07",
-                "headline":"project : KT&G CS site making",
+                "headline":"KT&G CSsite making",
                 "text":"인삼공사 정관장고객응대팀 사이트 제작",
                 "asset":
                 {
@@ -71,8 +71,8 @@
             },
             {
                 "startDate":"2011,10",
-                "headline":"project : SMATOOS site making",
-                "text":"스마투스 교육용 매거진 사이트 제작<br /><a href='http://www.smatoos.com/'>smatoos korea</a>",
+                "headline":"SMATOOS site making",
+                "text":"스마투스 교육용 매거진 사이트 제작<br /><a href='http://www.smatoos.com/'>Smatoos Korea</a>",
                 "asset":
                 {
                     "media":"assets/img/img_ss_smatoos.jpg",
@@ -83,7 +83,7 @@
             {
                 "startDate":"2013,01",
                 "headline":"work in KAIST Seoul",
-                "text":"KAIST 경영대학 파견근무 - 사이트 관리<br /><a href='http://www.business.kaist.ac.kr/'>KAIST seoul</a>",
+                "text":"KAIST 경영대학 파견근무 - 사이트 관리<br /><a href='http://www.business.kaist.ac.kr/'>KAIST Business School</a>",
                 "asset":
                 {
                     "media":"assets/img/img_ss_kaist.jpg",
