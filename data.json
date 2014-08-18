@@ -28,7 +28,7 @@
             {
                 "startDate":"2011,4",
                 "headline":"Work in Smatoos",
-                "text":"",
+                "text":"(주)스마투스 재직",
                 "asset":
                 {
                     "media":"assets/img/img_ss_smts_logo.jpg",
@@ -50,12 +50,12 @@
             {
                 "startDate":"2011/05",
                 "headline":"project : LOFFICIEL HOMME site making",
-                "text":"로피시엘 옴므 코리아 사이트 제작",
+                "text":"로피시엘 옴므 코리아 사이트 제작<br /><a href='www.lofficielhomme.co.kr'>lofficiel homme korea</a>",
                 "asset":
                 {
-                    "media":"<a href='www.lofficielhomme.co.kr'>assets/img/img_ss_lofi.jpg</a>",
+                    "media":"assets/img/img_ss_lofi.jpg",
                     "credit":"",
-                    "caption":"로피시엘 옴므 코리아"
+                    "caption":"로피시엘 옴므"
                 }
             },
             {
@@ -72,23 +72,23 @@
             {
                 "startDate":"2011,10",
                 "headline":"project : SMATOOS site making",
-                "text":"스마투스 교육용 매거진 사이트 제작",
+                "text":"스마투스 교육용 매거진 사이트 제작<br /><a href='http://www.smatoos.com/'>smatoos korea</a>",
                 "asset":
                 {
                     "media":"assets/img/img_ss_smatoos.jpg",
-                    "credit":"<a href='http://www.smatoos.com/'>smatoos korea</a>",
-                    "caption":""
+                    "credit":"",
+                    "caption":"스마투스 매거진 사이트"
                 }
             },
             {
                 "startDate":"2013,01",
                 "headline":"work in KAIST Seoul",
-                "text":"KAIST 경영대학 파견근무 - 사이트 관리",
+                "text":"KAIST 경영대학 파견근무 - 사이트 관리<br /><a href='http://www.business.kaist.ac.kr/'>KAIST seoul</a>",
                 "asset":
                 {
                     "media":"assets/img/img_ss_kaist.jpg",
-                    "credit":"<a href='http://www.business.kaist.ac.kr/'>KAIST seoul</a>",
-                    "caption":""
+                    "credit":"",
+                    "caption":"KAIST 경영대학"
                 }
             }
         ]
