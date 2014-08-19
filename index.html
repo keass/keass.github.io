@@ -4,16 +4,19 @@
 <html lang="kr">
 <head>
     <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>The World : dongsoo</title>
     <meta name="description" content="The World dongsoo">
     <meta name="author" content="keass9@gmail.com" /> 
 
     <link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/nanumgothic.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
      
     <!--[if lt IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<script type="text/javascript" src="js/respond.src.js"></script>
     <![endif]-->
 </head>
 
@@ -31,26 +34,12 @@
 
 <div id="contents">
 	
-	<div class="headers"
-		data-center="transform:translate3d(0px, 0px, 0);"
-		data-top="transform:translate3d(0px,170px, 0);"
-	>
+	<div class="headers"	>
 		<h3>profile</h3>
 	</div>
-	<div class="profile-bg"
-		data-bottom="transform:rotate(0deg) translate3d(0px, 00px, 0); " 
-		data--100-center="transform:rotate(-1deg) translate3d(0px, -100px, 0); " 
-		></div>
-	<div id="profile"
-		data-bottom="transform:translate3d(0px, 00px, 0); " 
-		data--100-center="transform:translate3d(0px, -100px, 0); " 
-	>
-			<div id="textbox1" class="column-2-1" 
-			 data-bottom="transform:translate3d(0px, 250px, 0)" 
-			 data-100-center="transform:translate3d(0px,-40px,0)"
-			 data-100-top="transform:translate3d(0px,-20px,0)"
-			 data-90-top="transform:translate3d(0px,-100px,0)"
-			>
+	<div class="profile-bg"></div>
+	<div id="profile">
+			<div id="textbox1" class="column-2-1">
 				<div class="aboutme">
 					<h4>about me</h4>
 					<ul>
@@ -68,12 +57,7 @@
 			
 			</div>
 
-			<div id="textbox2" class="column-2-2" 
-			 data-bottom="transform:translate3d(0px, 250px, 0)" 
-			 data-100-center="transform:translate3d(0px,-40px,0)"
-			 data-140-top="transform:translate3d(0px,-20px,0)"
-			 data-130-top="transform:translate3d(0px,-100px,0)"
-			>
+			<div id="textbox2" class="column-2-2" >
 				<div class="Skills">
 				<h4>Skills</h4>
 				<ul class="list-disc">
@@ -91,17 +75,11 @@
 <a href="#" class="scrolltopto">Scroll</a>
 
 <div id="works">
-	<div class="headers"
-		data-center="transform:translate3d(0px, 0px, 0);"
-		data-top="transform:translate3d(0px,100px, 0);"
-	>
+	<div class="headers"	>
 		<h3>Works</h3>
 	</div>
 
-		<div class="works-timeline"
-			data-100-bottom="transform:translate3d(0,0,0); "
-			data-50-bottom="transform:translate3d(0,-100px,0);"
-		>
+		<div class="works-timeline">
 		<iframe src="timeline.html" width="100%" height="500" frameborder="0"></iframe>
 		</div>
 </div><!--#works-->
@@ -109,10 +87,7 @@
 
 <div id="contactme">
 
-	<div class="headers"
-		data-center="transform:translate3d(0px, 0px, 0);"
-		data-top="transform:translate3d(0px,100px, 0);"
-	>
+	<div class="headers"	>
 		<h3>Contact Me</h3>
 	</div>
 	<div class="contactme-inner">
@@ -141,7 +116,7 @@
 		<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 		<script src="js/scripts.js"></script>
 
-		<script type="text/javascript" src="js/skrollr.js"></script>
+		<script type="text/javascript" src="js/skrollr.js"></script> 
 		<script type="text/javascript">
 		  var s = skrollr.init();
 

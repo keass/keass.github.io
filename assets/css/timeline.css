@@ -71,7 +71,7 @@ html,body{height:100%;padding:0px;margin:0px;}
 .slider .slider-item .content .content-container.layout-media{width:100%;}.slider .slider-item .content .content-container.layout-media .text{width:100%;height:100%;max-width:100%;display:block;text-align:center;}.slider .slider-item .content .content-container.layout-media .text .container{display:block;text-align:center;width:100%;margin-left:none;margin-right:none;}
 .slider .slider-item .content .content-container.layout-media .media{width:100%;min-width:50%;float:none;}.slider .slider-item .content .content-container.layout-media .media .media-wrapper{display:block;}.slider .slider-item .content .content-container.layout-media .media .media-wrapper .media-container{margin-left:auto;margin-right:auto;overflow:hidden;line-height:0px;padding:0px;}
 
-/* 2014-08-18 add */
+/* 2014-08-18 // 타임라인 내부 정렬 고정*/
 .slider .slider-item .content .content-container { width:100%; }
 .slider .slider-item .content .content-container .text { width:50%; text-align:center;}
 .slider .slider-item .content .content-container .media { width:50%; text-align:left; display:table-cell; margin:0 auto; }
