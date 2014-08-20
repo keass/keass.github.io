@@ -1,12 +1,22 @@
-span { display:none; }
 
 /* 스마트폰 세로*/
-@media only screen and (max-width : 320px) {
-span.l320 { display:block; }
+@media only screen and (max-width : 320px) { 
+	.wrapper { width:100%;}
+	.header { width:100%;  }
+	.header .menu {  } 
+
+	.contents { }
+	.contents .section {}
 }
 /* 스마트폰 가로 */
-@media only screen and (min-width : 321px) {
-span.l768 { display:block; }
+@media only screen and (min-width : 321px) { 
+	.wrapper { width:100%;}
+	.header { width:100%;  }
+	.header .menu {  } 
+
+	.contents { }
+	.contents .section {}
+
 }
 /* 스마트폰 고해상도 */
 @media
@@ -23,6 +33,6 @@ only screen and (min-device-pixel-ratio : 1.5) {
 
 /* 태블릿 가로 */
 @media only screen and
-(min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
-span.l1000 { display:block; }
+(min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) { 
+
 }
