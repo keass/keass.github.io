@@ -2,13 +2,28 @@ body { background:#eee; }
 
 .wrapper { max-width:1000px; margin:0 auto; background:#fff;}
 .header { width:100%; height:50px; position:fixed; }
-.header .menu { font-family:'Yanone Kaffeesatz', sans-serif; }
-.header .menu li { float:left; display:block; padding:10px; }
+    .header .menu { font-family:'Yanone Kaffeesatz', sans-serif; }
+    .header .menu li { float:left; display:block; padding:10px; }
 
 .contents { padding-top:50px; width:100%;}
-.contents .section { min-height:400px; max-height:500px; display:block; width:100%; }
+.contents .section { display:block; width:100%; clear:both; }
 .contents .bg01 { background:#ccc;}
 .contents .bg02 { background:#888;}
+
+    .profile-bg { margin-top:10px; height:230px; width:100%; background:black; }
+    .profile-inner { width:100%; height:200px; margin-top:-230px; color:white; }
+
+    .profile-inner .column-2-1 { float:left; width:40%; margin-left:10%; margin-top:20px; margin-bottom:20px;  }
+    .profile-inner .column-2-2 { float:left; width:40%; margin-right:10%; margin-top:20px; margin-bottom:20px;  }
+
+    .profile-inner h4 { font-family:'Yanone Kaffeesatz', sans-serif; font-size:20px;  }
+    .profile-inner ul,
+    .profile-inner p { padding:10px 10px 20px 10px; line-height:1.3em; }
+
+    .contactme-inner { clear:both; }
+    .contactme-inner h4 { font-weight:bold; font-family:'Yanone Kaffeesatz', sans-serif; }
+    .contactme-inner div { width:25%; float:left; line-height:1.3em;}
+    .contactme-inner div:first-child { width:50%; }
 
 .headline-wrap { border:1px solid #000; padding:5px; width:200px; margin:0 auto;  }
 .headline-wrap h3 { font-family:'Yanone Kaffeesatz', sans-serif; text-align:center; }
