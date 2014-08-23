@@ -11,6 +11,9 @@
 	.profile-inner { height:100%; }
     .profile-inner .column-2-1 { width:100%; padding:10px;}
     .profile-inner .column-2-2 { width:100%; padding:10px;}
+
+	.timeline-mobile-history { display:block; }
+	.works-timeline iframe { display:none;  } 
 }
 /* 스마트폰 가로 */
 @media only screen and (min-width : 321px) { 
