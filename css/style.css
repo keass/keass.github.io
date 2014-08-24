@@ -66,10 +66,11 @@ body { background:#eee;  }
 	.contactme-inner div:first-child ul { background:url('../img/sprite.png') no-repeat; }	
 	.contactme-inner div:first-child ul li { padding-left:25px; }
 
-	.footer { text-align:center; background:#2d3037; color:white; font-size:14px; padding:10px; line-height:1.5em; font-family:'Roboto Condensed', sans-serif; font-weight:300; }
+.footer { text-align:center; background:#2d3037; color:white; font-size:14px; padding:10px; line-height:1.5em; font-family:'Roboto Condensed', sans-serif; font-weight:300; }
+
+.scrolltotop { padding:5px; width:15px; height:15px; background:#ccc; border:1px solid #bbb; font-size:12px; position:fixed; right:20px; bottom:20px; }
+.scrolltotop a { color:black; display:block; } 
 
 
-
-
-	/* power */ 
-	.clear:after {content:""; display:block; clear:both; }
+/* power */ 
+.clear:after {content:""; display:block; clear:both; }
