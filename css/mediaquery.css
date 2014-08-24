@@ -9,7 +9,7 @@
 	.contents .section { width:100%;}
 
 	.profile-bg { display:none; }
-	.profile-inner { height:auto; width:100%; background:black; margin:0; }
+	.profile-inner { height:auto; width:100%; background:#f3f2d2; margin:0; padding-top:10px; }
 	.profile-inner .pre-profile { width:90%; font-size:1em; }
     .profile-inner .column-2-1 { width:100%; padding:10px 0; margin:10px 0; float:none;}
     .profile-inner .column-2-2 { width:100%; padding:10px 0; margin:10px 0;  float:none; }
@@ -22,15 +22,12 @@
 	.profile-inner p { margin:10px 0; padding:20px 0; border-left:0; border-top:1px solid red; }
 
 	.works-timeline iframe { display:none !important;  } 
-	.timeline-mobile-history { 
-		display:block !important; 
-		background:black;
-		padding:10px;
-		}
-
-
-	.contactme-inner div:first-child { width:100%; }
-	.contactme-inner div { width:100%; margin-bottom:20px;  }
+	.timeline-mobile-history { 		display:block !important; 
+			background:#9b8f69;
+			padding:10px;	}
+	.contactme-inner div:first-child { width:90%; }
+	.contactme-inner div { width:90%; margin:0 5% 10px; }
+	.contactme-inner h4 { padding-bottom: 5px; margin-bottom: 5px; }
 }
 /* 스마트폰 가로 */
 @media only screen and (min-width : 361px) { 
