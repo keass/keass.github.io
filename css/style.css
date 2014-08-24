@@ -7,11 +7,11 @@ body { background:#eee;  }
     .header .menu li { float:left; display:block; padding:10px; }
 	.header .menu li.active { border-bottom:3px solid #3e9f8f; padding-bottom:7px; } 
     .header .menu li:hover { background:white; cursor:pointer;  }
-	.header .menu li a { color:white; }
+	.header .menu li a { color:white; display:block; }
 	.header .menu li:hover a { color:#d74262; }
 
-.contents { padding-top:50px; width:100%;}
-.contents .section { display:block; width:100%; clear:both; padding:40px 0 40px; }
+.contents { padding-top:30px; width:100%;}
+.contents .section { display:block; width:100%; clear:both; padding:60px 0 40px; }
 .contents .bg01 { background: ;}
 .contents .bg02 { background: ;}
 

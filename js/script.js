@@ -1,5 +1,7 @@
-/**
- * Created by dongsoo on 2014-08-07.
- */
-
-console.log('hihi');
+ jQuery(document).ready(function($) {
+ 
+        $(".scroll").click(function(event){            
+                event.preventDefault();
+                $('html,body').animate({scrollTop:$(this.hash).offset().top}, 300);
+        });
+}); 
