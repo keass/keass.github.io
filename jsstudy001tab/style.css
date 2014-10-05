@@ -1,0 +1,10 @@
+body { background:#ffffff; }
+h1 { padding:0 0 10px; margin:0; }
+#tab { width:80%; margin:0 auto; background:black; padding:15px;  }
+#tab ul { list-style: none;padding:0; margin:0;   }
+#tab ul li { color:white; background:#0C91EC; margin-right:1px; float:left; padding:5px; border-radius:5px 5px 0 0; }
+#tab ul:after { content:""; clear:both; display:block;  }
+#tab ul li.active { background: #fff; color:#888;}
+
+#tab div {display:none;  }
+#tab div.active { display: block; border-top:0;clear:both; background: #fff; padding:15px; }
