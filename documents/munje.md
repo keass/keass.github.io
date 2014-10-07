@@ -41,13 +41,16 @@
 
 * 여러 도메인을 이용하여 서버 사이트 데이터를 제공하는 것이 더 나은 이유는 무엇인가요?
 	* 브라우저가 한 번에 1개의 도메인에서 다운로드 받는 리소스는 몇 개 인가요?
+	
 	> 과거에는 2개 현재는 6개까지 늘었다고 한다. 파이어폭스는 8개
 	[참고한 글 : 스택 오버플로우](http://stackoverflow.com/questions/9583172/how-many-resources-will-a-browser-download-from-a-given-domain-at-a-time) /  [참고한 글2 : 블로그 글](http://sgdev-blog.blogspot.sg/2014/01/maximum-concurrent-connection-to-same.html) 
 	한번에 받아 올 수 있는 사이트 데이터량이 8개로 제한적이니 CDN 등 외부 도메인에서 데이터를 제공 받아 동시에 로딩하는 리소스 개수를 여유롭기 위해서 인듯
-	
+
+
 * 만약에 디자인을 표현하기 위해 8개의 다른 Stylesheet를 가지고 있다면, 사이트에서는 어떻게 통합하실 건가요?
 	* 파일의 연결법을 찾아내세요.
 	* Build system을 이용한 결합없이, `@import`를 사용하면 점수를 깎으세요.
+	
 	> 1. 직접 최적화 먼저. 중복값 제거, 우선순위(캐스캐이딩) 고려해서 파일 순서 정해서 통합 진행. 한 파일내 @import로 몰아오는 건 구식
 	> 2. 온라인 툴 활용, CSS minify, CSS compressor 정도
 	> 3. 큰 규모에서는 최근 알게된 grunt - concat 으로도 가능할 듯
