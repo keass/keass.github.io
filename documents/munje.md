@@ -27,14 +27,24 @@
 	* "누구도 성공하지 못합니다" 라고 말하면 보너스 포인트를 주세요.
 	* 각 특색을 설명을 한다면, 더 높은 보너스 포인트를 주세요.
 	
-	> 점진적 향상법 / html 마크업 완료, css 으로 스타일 추가, js로 사용자 경험 추가		
-	> 우아한 성능저하법 / 최신 기술이 아닌 사람들에게도 보일 수 있게 의도적인 빼기를 하는 것	
-	> http://webdesign.about.com/od/webdesignglossary/g/graceful-degradation.htm 
+	> **점진적 향상법** html 마크업 완료, css 으로 스타일 추가, js로 사용자 경험 추가 의 순서처럼 토대를 쌓아가며 제작하는 방식		
+	> **우아한 성능저하법** 최신 기술(브라우저)를 쓰지 않는 사람들에게도 사용할 수 있게 의도적인 빼기로 만들어지는 방식	
+	> **[참고한 글](http://webdesign.about.com/od/webdesignglossary/g/graceful-degradation.htm)**
 	
 * "시멘틱 HTML(Semantic HTML)"이 무엇을 뜻하는지 설명해주세요.
+> 시멘틱이 말 그대로 의미라는 뜻이므로 웹을 설계할때 무의미하고 낭비되는 부분을 없애고, 사람만이 읽을 수 있는 마크업이 아닌 컴퓨터도 분석할 수 있는 체계로 만들어 효과적인 정보만을 골라내어 보여줄 수 있도록 지향하는 기술
+> **[참고한 글 : 위키 -시멘틱 웹-](http://ko.wikipedia.org/wiki/%EC%8B%9C%EB%A7%A8%ED%8B%B1_%EC%9B%B9)**
+
 * "최소화(minification)"가 무엇을 하는 것입니까?
+> 공백, 줄바꿈, 주석 등을 제거해서 더 간소화 하는 작업, 특히 javascript 와 CSS에 활용성 높음
+> **[참고한 글 :위키 -minification-](http://en.wikipedia.org/wiki/Minification_(programming))**
+
 * 여러 도메인을 이용하여 서버 사이트 데이터를 제공하는 것이 더 나은 이유는 무엇인가요?
 	* 브라우저가 한 번에 1개의 도메인에서 다운로드 받는 리소스는 몇 개 인가요?
+	> 과거에는 2개 현재는 6개까지 늘었다고 한다. 파이어폭스는 8개
+	[참고한 글 : 스택 오버플로우](http://stackoverflow.com/questions/9583172/how-many-resources-will-a-browser-download-from-a-given-domain-at-a-time) /  [참고한 글2 : 블로그 글](http://sgdev-blog.blogspot.sg/2014/01/maximum-concurrent-connection-to-same.html) 
+	한번에 받아 올 수 있는 사이트 데이터량이 8개로 제한적이니 CDN 등 외부 도메인에서 데이터를 제공 받아 동시에 로딩하는 리소스 개수를 여유롭기 위해서 인듯
+	
 * 만약에 디자인을 표현하기 위해 8개의 다른 Stylesheet를 가지고 있다면, 사이트에서는 어떻게 통합하실 건가요?
 	* 파일의 연결법을 찾아내세요.
 	* Build system을 이용한 결합없이, `@import`를 사용하면 점수를 깎으세요.
