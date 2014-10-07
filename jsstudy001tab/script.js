@@ -1,3 +1,4 @@
+
 /**
  * Created by dongsoo on 2014-10-04.
  *
@@ -8,14 +9,14 @@
  *
  */
 
-var tabmodle = tabmodle || {};
+var tabmodule = tabmodule || {};
 
-tabmodle.first = function() {
+tabmodule.first = function() {
     this._elemenet(); // 프로토 타입 내용 활용
     this._init(); // 초기화
     this._evCap(); // 마우스 클릭 캡쳐
 };
-tabmodle.first.prototype = {
+tabmodule.first.prototype = {
     _elemenet:function(){
         this.tab = document.getElementById('tab');
         this.tabheader = tab.querySelector("ul li");
@@ -25,22 +26,21 @@ tabmodle.first.prototype = {
     },
     _init:function(){
         this.tabheader.style = "display:none";
-        this.tabcontent.style = "display:none"
+        this.tabcontent.style = "display:none";
         this.tabheader.setAttribute("class","active");
         this.tabcontent.setAttribute("class","active");
     },
     _evCap:function(){
-        var that = this;
-        var count = 0;
-        for (var j = 0; j<this.tabheaderEv.length; j++) {
+        var j, that = this;
+        for (j = 0; j<this.tabheaderEv.length; j++) {
             this.tabheaderEv[j].addEventListener("mousedown",function(){
-                    that._tabclick(this);
-                });
-            }
+                that._tabclick(this);
+            });
+        }
     },
     _tabclick:function(arg){
-        var that = this;
-        for (var k = 0; k < that.tabheaderEv.length; k++){
+        var that = this, k =0;
+        for (k = 0; k < that.tabheaderEv.length; k++){
             that.tabheaderEv[k].removeAttribute("class");
             that.tabcontentEv[k].removeAttribute("class");
         }
@@ -57,4 +57,4 @@ tabmodle.first.prototype = {
 
     }
 };
-var stat = new tabmodle.first();
+var stat = new tabmodule.first();
