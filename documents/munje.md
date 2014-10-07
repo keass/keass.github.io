@@ -18,15 +18,20 @@
 * 자주 보는 Blog가 있습니까?
 * 버전 관리 시스템은 어떤 것들을 사용해보셨습니까?
 * 선호하는 개발 환경은 무엇입니까? (운영체제, 에디터, 브라우저, 도구 등등)
+
 	> 윈도7, 웹스톰, 크롬, 파폭, 음료수
+	
 * 당신이 웹 페이지를 만들 때의 과정을 설명 해주실 수 있을까요?
+
 	> 간단하게 스케치, html로 마크업, css로 레이아웃만 잡고, 콘텐츠 작성, html/css 먼저 작성, javascript 작성
+
 * 점진적 향상법(progressive enhancement)과 우아한 성능저하법(graceful degradation)의 차이를 설명하실 수 있습니까?
 	* "누구도 성공하지 못합니다" 라고 말하면 보너스 포인트를 주세요.
 	* 각 특색을 설명을 한다면, 더 높은 보너스 포인트를 주세요.
+
 > 점진적 향상법 / html 마크업 완료, css 으로 스타일 추가, js로 사용자 경험 추가
 > 우아한 성능저하법 / 최신 기술이 아닌 사람들에게도 보일 수 있게 의도적인 빼기를 하는 것
- > http://webdesign.about.com/od/webdesignglossary/g/graceful-degradation.htm 
+> http://webdesign.about.com/od/webdesignglossary/g/graceful-degradation.htm 
 	
 * "시멘틱 HTML(Semantic HTML)"이 무엇을 뜻하는지 설명해주세요.
 * "최소화(minification)"가 무엇을 하는 것입니까?
