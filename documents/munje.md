@@ -26,9 +26,9 @@
 * 점진적 향상법(progressive enhancement)과 우아한 성능저하법(graceful degradation)의 차이를 설명하실 수 있습니까?
 	* "누구도 성공하지 못합니다" 라고 말하면 보너스 포인트를 주세요.
 	* 각 특색을 설명을 한다면, 더 높은 보너스 포인트를 주세요.
-> 점진적 향상법 / html 마크업 완료, css 으로 스타일 추가, js로 사용자 경험 추가
-> 우아한 성능저하법 / 최신 기술이 아닌 사람들에게도 보일 수 있게 의도적인 빼기를 하는 것
- > http://webdesign.about.com/od/webdesignglossary/g/graceful-degradation.htm 
+	> 점진적 향상법 / html 마크업 완료, css 으로 스타일 추가, js로 사용자 경험 추가		
+	> 우아한 성능저하법 / 최신 기술이 아닌 사람들에게도 보일 수 있게 의도적인 빼기를 하는 것	
+	 > http://webdesign.about.com/od/webdesignglossary/g/graceful-degradation.htm 
 	
 * "시멘틱 HTML(Semantic HTML)"이 무엇을 뜻하는지 설명해주세요.
 * "최소화(minification)"가 무엇을 하는 것입니까?
