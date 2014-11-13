@@ -1,29 +1,26 @@
-/**
- * Created by dongsoo on 2014-10-21.
- */
+var output = document.getElementById('output');
 
-// 1~X 까지 홀,짝 합수 구하기
-var oddaddx = function (arg, arg2){
-    var k = 0, j = 0, i = 1, midstr = '', midstr2 = '';
-    console.log(i%arg2 === 0);
-    for (i; i<=arg; i++){
-        if (i%arg2 === 0){
-            k = k + i;
-            midstr = midstr + "+"+i;
-        } else if (i%arg2 === 1) {
-            j = j + i;
-            console.log(j);
-            midstr2 = midstr2 + "+"+i;
+var isPali = function (arg){ // 대칭수 검사
+    var lastone, newone;
+    lastone = String(arg).split("");
+    lastone.reverse();
+    newone = Number(lastone.join(""));
+    if (newone === arg ) {
+        return true;
+    }
+};
+var two3digitPalindrome = function(){ // 대칭수 출력
+    var one3digit,two3digit,arrdigit =[],index;
+    for (one3digit = 100; one3digit<1000; one3digit++){
+        for (two3digit = 100; two3digit<1000; two3digit++){
+            if (isPali(one3digit*two3digit)) {
+                index = one3digit+two3digit;
+                arrdigit[index] = one3digit*two3digit;
+                arrdigit = arrdigit.sort();
+                console.log(one3digit, two3digit, index, one3digit*two3digit);
+            }
         }
     }
-
-    if (arg2 === 2) {
-        console.log(midstr, k);
-    } else if (arg2 === 1) {
-        console.log(midstr2, j);
-    }
-
-
 };
 
-oddaddx(12,1);
+two3digitPalindrome(353);
