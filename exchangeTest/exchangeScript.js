@@ -61,17 +61,8 @@ nhn.exchange.prototype = {
     currnetCalc : function(nation1,nation2,exchValue){
         return (exchValue)/(this.currencyData[arguments[0]])*(this.currencyData[arguments[1]]);
     }
-    /*currnetCalcNxt : function(nation1,nation2,exValue){
-        return (exchValue)/(this.currencyData[arguments[0]])*(this.currencyData[arguments[1]]);
-        //console.log(exValue/nation1*nation2);
-        //return exValue/nation1*nation2;
-        // 한화 엔화로
-    },
-    output : function() {
-        this.currnetCalc(this.currencyData.KRW, this.currencyData.JPY, 20000);
-    }*/
 };
 
-var test = new nhn.exchange();
+var execute = new nhn.exchange();
 
 
