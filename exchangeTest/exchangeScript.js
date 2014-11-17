@@ -25,13 +25,16 @@ nhn.exchange.prototype = {
         this.stateNationNxt = "JPY";
     },
     currencyData : {USD:1, KRW:1095.40, JPY:116.06, EUR:0.80, CNY:6.13, AUS:1.14, CAD:1.13, NZD:1.26},
+    currencyUnitRight : {USD:"달러", KRW:"원", JPY:"엔", EUR:"유료", CNY:"위안", AUS:"달러", CAD:"달러", NZD:"달러"},
 
     nodeInit:function(){
-         this.selectNation01 = document.getElementById("ecg_ifmt");
-         this.selectNation02 = document.getElementById("ecg_ifmt2");
-         this.flag = document.getElementsByClassName("flag");
-         this.currencyInput01 = document.getElementById("num");
-         this.currencyInput02 = document.getElementById("num2");
+        this.selectNation01 = document.getElementById("ecg_ifmt");
+        this.selectNation02 = document.getElementById("ecg_ifmt2");
+        this.flag = document.getElementsByClassName("flag");
+        this.unitLeft = document.getElementsByClassName("nt_eng");
+        this.unitright = document.getElementsByClassName("nb_txt");
+        this.currencyInput01 = document.getElementById("num");
+        this.currencyInput02 = document.getElementById("num2");
      },
     attachEvent:function(){
         var that = this;
@@ -44,13 +47,24 @@ nhn.exchange.prototype = {
     },
     changeNationPre:function(){
         this.stateNationPre = this.selectNation01.options[this.selectNation01.selectedIndex].getAttribute('data-unit');
+        console.log(this.stateNationPre);
         this.currencyInput02.value = this.currnetCalc(this.stateNationPre, this.stateNationNxt, this.currencyInput01.value);
         this.changeNationFlagPre();
+        this.changeNationUnitPre();
     },
     changeNationNxt:function(){
         this.stateNationNxt = this.selectNation02.options[this.selectNation02.selectedIndex].getAttribute('data-unit');
         this.currencyInput02.value = this.currnetCalc(this.stateNationNxt, this.stateNationPre, this.currencyInput01.value);
         this.changeNationFlagNxt();
+        this.changeNationUnitNxt();
+    },
+    changeNationUnitPre:function(){
+        this.unitLeft[0].innerHTML = this.stateNationPre;
+        this.unitright[0].innerHTML = this.currencyInput01.value +" "+this.currencyUnitRight[this.stateNationPre];
+    },
+    changeNationUnitNxt:function(){
+        this.unitLeft[1].innerHTML = this.stateNationNxt;
+        this.unitright[1].innerHTML = this.currencyInput02.value +" "+this.currencyUnitRight[this.stateNationNxt];
     },
     changeNationFlagPre:function() {
         this.flag[0].setAttribute("class", "flag "+(this.stateNationPre).toLowerCase());
