@@ -4,16 +4,20 @@
  1. 변경 사항은 실시간으로 적용, 단위표기, 나라 지도 등
  // 1. 셀렉트시 지도 변경, 단위 하단, 단위 우측 변경
  // 2. 금액 적을때, 하단에 실시간 변경 상대적으로 둘다
- 2. 금액 적고, 국가 바꿀때도 수치는 그대로 유지, 새로 계산
+ // 2. 금액 적고, 국가 바꿀때도 수치는 그대로 유지, 새로 계산
+
  3. 숫자만 입력 가능하도록
+ 4. 0일때 클릭하면 다지우고 입력, 0 이상일때 뒤에서 부터 입력,젤 앞에 0 지우기
+ 4. 영부터 입력 안됌
  4. 자리수 표시하기
 
- // 하단 내용
- 3. 하단에 매매기준율 전일대비 등락율 값 가져오기
- 4. 오름은 빨강, 내림은 파랑
- 5. 가능하면 국가별 환율 넣고, 국가 기준 금액 넣어서 새로고침
 
- */
+// 하단 내용
+3. 하단에 매매기준율 전일대비 등락율 값 가져오기
+4. 오름은 빨강, 내림은 파랑
+5. 가능하면 국가별 환율 넣고, 국가 기준 금액 넣어서 새로고침
+
+*/
 var nhn = {};
 
 nhn.exchange = function(){
@@ -49,6 +53,7 @@ nhn.exchange.prototype = {
             that.changeNationNxt();
         });
         this.currencyInput01.addEventListener("keydown",function(){
+            that.isNumDot(event);
             that.changeNationPre();
         });
         this.currencyInput02.addEventListener("keydown",function(){
@@ -85,6 +90,23 @@ nhn.exchange.prototype = {
     },
     currnetCalc : function(){
         return arguments[2]/(this.currencyData[arguments[0]])*(this.currencyData[arguments[1]]);
+    },
+    isNumDot : function(event){
+
+        //console.log(event.keyCode);
+        if ( !(48 <= event.keyCode && event.keyCode <= 57 || 96 <= event.keyCode && event.keyCode <= 105 || event.keyCode === 190 || event.keyCode === 8 )){
+
+            event.preventDefault();
+        }
+
+
+       //
+       // console.log(arg.keyCode);
+       // if (reg.test(arg) || arg.keyCode === 110) {
+       //     console.log(arg);
+       // }
+        //return !isNaN(arg);
+
     }
 };
 
