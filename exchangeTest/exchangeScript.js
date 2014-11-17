@@ -5,8 +5,9 @@
  // 1. 셀렉트시 지도 변경, 단위 하단, 단위 우측 변경
  // 2. 금액 적을때, 하단에 실시간 변경 상대적으로 둘다
  // 2. 금액 적고, 국가 바꿀때도 수치는 그대로 유지, 새로 계산
+ // 3. 숫자만 입력 가능하도록
 
- 3. 숫자만 입력 가능하도록
+ 4. 숫자 소숫점 2자리까지만
  4. 0일때 클릭하면 다지우고 입력, 0 이상일때 뒤에서 부터 입력,젤 앞에 0 지우기
  4. 영부터 입력 안됌
  4. 자리수 표시하기
@@ -61,6 +62,8 @@ nhn.exchange.prototype = {
         });
     },
     changeNationPre:function(){
+        console.log(this.selectNation01.options[this.selectNation01].getAttributeNode('selected'));
+        this.selectNation01.options[this.selectNation01.selectedIndex].setAttribute('selected','');
         this.stateNationPre = this.selectNation01.options[this.selectNation01.selectedIndex].getAttribute('data-unit');
         this.currencyInput02.value = this.currnetCalc(this.stateNationPre, this.stateNationNxt, this.currencyInput01.value);
         this.changeNationFlagPre();
@@ -94,18 +97,10 @@ nhn.exchange.prototype = {
     isNumDot : function(event){
 
         //console.log(event.keyCode);
-        if ( !(48 <= event.keyCode && event.keyCode <= 57 || 96 <= event.keyCode && event.keyCode <= 105 || event.keyCode === 190 || event.keyCode === 8 )){
+        if ( !(48 <= event.keyCode && event.keyCode <= 57 || 96 <= event.keyCode && event.keyCode <= 105 || event.keyCode === 190 || event.keyCode === 110 || event.keyCode === 8 )){
 
             event.preventDefault();
         }
-
-
-       //
-       // console.log(arg.keyCode);
-       // if (reg.test(arg) || arg.keyCode === 110) {
-       //     console.log(arg);
-       // }
-        //return !isNaN(arg);
 
     }
 };
