@@ -15,8 +15,10 @@
  //12. 자리수 쉼표 표시하기
  //13. 최고 수, >> html 에 maxlength 추가
 
-// 미구현
+// 과제 제출 이후 작업
  0. 점 중복 입력 방지
+
+ // 미구현
  1. 인풋 입력 뒤에서부터 가능하도록
  2. 셀렉티드 다시 적용시키기
  3. 우측 하단 단위 조,억,만 단위 한글로 표기
@@ -79,12 +81,14 @@ nhn.exchange.prototype = {
         });
         this.currencyInput01.addEventListener("keydown",function(){
             that.leadingZeroCheck(that.currencyInput01);
-            that.isNumDot(event);
+            that.isNumbersAndDot(event);
+            that.dobleDotCheck(this.value,event);
 
         });
         this.currencyInput02.addEventListener("keydown",function(){
             that.leadingZeroCheck(that.currencyInput02);
-            that.isNumDot(event);
+            that.isNumbersAndDot(event);
+            that.dobleDotCheck(this.value,event);
         });
     },
     selectFlag:function(){
@@ -127,27 +131,35 @@ nhn.exchange.prototype = {
     changeNationFlagNxt:function() {
         this.flag[1].setAttribute("class","flag "+(this.stateNationNxt).toLowerCase());
     },
-
     leadingZeroCheck:function(arg){
         if (arg.value[0] === "0") { arg.value = ""; }
     },
-    regCommaOn:function(arg){
-        var reg = /(^[+]?\d+)(\d{3})/;
-        arg += '';
-        while ( reg.test(arg) ) {
-            arg = arg.replace(reg, '$1'+','+'$2');
+    dobleDotCheck:function(arg,event){
+        var regdot = /\./;
+        arg = (this.regCommaOff(arg));
+        if (arg.match(regdot)) {
+            if ( event.keyCode===190 || event.keyCode===110 ){ event.preventDefault(); }
         }
-        return arg;
+    },
+    regCommaOn:function(arg){
+        var reg, parts;
+        reg = /(^[+]?\d+)(\d{3})/;
+        parts = arg.toString().split(".");
+        while ( reg.test(parts) ) {
+            parts[0] = parts[0].replace(reg, '$1'+','+'$2');
+        }
+        return parts.join(".");
     },
     regCommaOff:function(arg) {
-        arg = String(arg).replace(/\,/g,"");
-        return arg;
+        var parts = arg.toString().split(".");
+        parts[0] = parts[0].replace(/,/g,"");
+        return parts.join(".");
     },
     currnetCalc : function(nationPre,nationNxt,exValue){
-        if (exValue === ""){ return 0;}
+        if (exValue === ""|| exValue === "."){ return 0;}
         return (parseFloat(exValue)/parseFloat(this.currencyRateData[nationPre])*parseFloat(this.currencyRateData[nationNxt])).toFixed(2);
     },
-    isNumDot : function(event){
+    isNumbersAndDot : function(event){
         ///console.log(event.keyCode);
         var ky = event.keyCode;
         if (!((ky<58 && ky>47) || (ky<106 && ky>95) || (ky===46 || ky===8) || (ky===190 || ky===110))){
