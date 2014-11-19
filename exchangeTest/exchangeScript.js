@@ -33,7 +33,7 @@ nhn.exchange = function(){
 
 nhn.exchange.prototype = {
     currencyRateData : {USD:10000000000, KRW:10985000000000, JPY:1165294691729.96, EUR:8018599354.72, CNY:61262617812.73, AUS:1146396443405, CAD:11284026707.76, NZD:12586507172.65},
-    currencyUnitRight : {USD:"달러", KRW:"원", JPY:"엔", EUR:"유료", CNY:"위안", AUS:"달러", CAD:"달러", NZD:"달러"},
+    currencyUnitRight : {USD:"달러", KRW:"원", JPY:"엔", EUR:"유로", CNY:"위안", AUS:"달러", CAD:"달러", NZD:"달러"},
     currencyMax : 10000,
 
     init:function(){
