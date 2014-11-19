@@ -10,16 +10,13 @@
  // 7. 초기화
  // 8. 입력 수 젤 앞에 0 지우기 >> 값 제일 앞 0 일때 삭제
  // 0. 오류 먼저, 키입력 바뀌었을때, NaN 뜨는 내용
+ // 3. 하나씩만 지우기
+ // + 강제 0 입력시 단위에 00 표기 지우기
+ //10. 자리수 쉼표 표시하기
 
  2. 최고 수, 최소 수
-
  9. 셀렉티드 다시 적용시키기
- + 강제 0 입력시 단위에 00 표기 지우기
-
- 3. 하나씩만 지우기
  7. 0 이상일때 뒤에서 부터 입력, >> 마우스 땔 때  문자 길이 젤 뒤로 보내기 >> 키 하단 입력?
-
- 10. 자리수 쉼표 표시하기
  11. 단위 우측 한글 표기
 
 // 미구현
@@ -72,14 +69,14 @@ nhn.exchange.prototype = {
         this.currencyInput01.addEventListener("keyup",function(){
             that.recentInputChecker = 0;
             that.changeNationPre();
-            that.currencyInput02.value = Number(that.currnetCalc(that.stateNationPre, that.stateNationNxt, that.currencyInput01.value)).toLocaleString();
-            that.currencyInput01.value = Number(that.currencyInput01.value);
+            that.currencyInput02.value = that.regCommaOn(Number(that.currnetCalc(that.stateNationPre, that.stateNationNxt, that.regCommaOff(that.currencyInput01.value))).toFixed(2).toLocaleString());
+            that.currencyInput01.value = that.regCommaOn(that.regCommaOff(that.currencyInput01.value));
         });
         this.currencyInput02.addEventListener("keyup",function(){
             that.recentInputChecker = 1;
             that.changeNationNxt();
-            that.currencyInput01.value = Number(that.currnetCalc(that.stateNationNxt, that.stateNationPre, that.currencyInput02.value)).toLocaleString();
-            that.currencyInput02.value = Number(that.currencyInput02.value);
+            that.currencyInput01.value = that.regCommaOn(Number(that.currnetCalc(that.stateNationNxt, that.stateNationPre, that.regCommaOff(that.currencyInput02.value))).toFixed(2).toLocaleString());
+            that.currencyInput02.value = that.regCommaOn(that.regCommaOff(that.currencyInput02.value));
         });
         this.currencyInput01.addEventListener("click",function(){
         });
@@ -101,9 +98,9 @@ nhn.exchange.prototype = {
     currencyInputBySelected:function(){
         var that = this;
         if (this.recentInputChecker === 0) {
-            this.currencyInput02.value = Number(this.currnetCalc(that.stateNationPre, that.stateNationNxt, that.currencyInput01.value)).toLocaleString();
+            this.currencyInput02.value = this.regCommaOn(Number(this.currnetCalc(this.stateNationPre, this.stateNationNxt, this.regCommaOff(this.currencyInput01.value))).toFixed(2).toLocaleString());
         } else {
-            this.currencyInput01.value = Number(this.currnetCalc(that.stateNationNxt, that.stateNationPre, that.currencyInput02.value)).toLocaleString();
+            this.currencyInput01.value = this.regCommaOn(Number(this.currnetCalc(this.stateNationNxt, this.stateNationPre, this.regCommaOff(this.currencyInput02.value))).toFixed(2).toLocaleString());
         }
     },
     changeNationPre:function(){
@@ -128,6 +125,12 @@ nhn.exchange.prototype = {
         this.unitLeft[1].innerHTML = this.stateNationNxt;
         this.unitright[1].innerHTML = this.currencyInput02.value +" "+this.currencyUnitRight[this.stateNationNxt];
     },
+    changeNationKorUnitPre:function(){
+
+    },
+    changeNationKorUnitNxt:function(){
+
+    },
     changeNationFlagPre:function() {
         this.flag[0].setAttribute("class", "flag "+(this.stateNationPre).toLowerCase());
     },
@@ -139,6 +142,27 @@ nhn.exchange.prototype = {
     },
     minRage:function(){
 
+    },
+    regCommaOn:function(n){
+        if( isNaN(n) ) {
+            return 0;
+        }
+        var reg = /(^[+-]?\d+)(\d{3})/;
+        n += '';
+
+        while ( reg.test(n) ) {
+            n = n.replace(reg, '$1' + ',' + '$2');
+        }
+        return n;
+    },
+    regCommaOff:function(n) {
+        n = String(n).replace(/\,/g,"");
+        if(isNaN(n)) {
+            return 0;
+        }else {
+            return n;
+            console.log(typeof n);
+        }
     },
     currnetCalc : function(){
         if (arguments[2] === ""){ return 0;}
