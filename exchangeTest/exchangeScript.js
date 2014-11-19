@@ -6,26 +6,25 @@
  // 3. 금액 적을때, 반대 금액 실시간 변경
  // 4. 최근에 수치를 입력한 기준으로 다른쪽 고치기
  // 5. 숫자 소숫점 2자리까지만
+ // 6. 숫자만 입력 가능하도록
+ // 7. 초기화
+ // 8. 입력 수 젤 앞에 0 지우기 >> 값 제일 앞 0 일때 삭제
+ // 0. 오류 먼저, 키입력 바뀌었을때, NaN 뜨는 내용
 
+ 2. 최고 수, 최소 수
 
-//  6. 숫자만 입력 가능하도록
- 7. 0 이상일때 뒤에서 부터 입력, >> 마우스 땔 때  문자 길이 젤 뒤로 보내기 >> 키 하단 입력?
- 8. 입력 수 젤 앞에 0 지우기 >> 값 제일 앞 0 일때 삭제
  9. 셀렉티드 다시 적용시키기
+ + 강제 0 입력시 단위에 00 표기 지우기
 
- + 추가
- 0. 오류 먼저, 키입력 바뀌었을때, NaN 뜨는 내용
- 1. 초기화
-
-
+ 3. 하나씩만 지우기
+ 7. 0 이상일때 뒤에서 부터 입력, >> 마우스 땔 때  문자 길이 젤 뒤로 보내기 >> 키 하단 입력?
 
  10. 자리수 쉼표 표시하기
  11. 단위 우측 한글 표기
 
-// 하단 내용
+// 미구현
 3. 하단에 매매기준율 전일대비 등락율 값 가져오기
-4. 오름은 빨강, 내림은 파랑
-5. 가능하면 국가별 환율 넣고, 국가 기준 금액 넣어서 새로고침
+5. 국가별 환율, 국가 기준 금액 넣어서 새로고침
 
 */
 var nhn = {};
@@ -33,20 +32,22 @@ var nhn = {};
 nhn.exchange = function(){
     this.nodeInit();
     this.attachEvent();
-    this.test(); // 임시
+    this.init();
 };
 
 nhn.exchange.prototype = {
     //currencyData : {USD:1000, KRW:1095400, JPY:116060, EUR:800, CNY:6130, AUS:1140, CAD:1130, NZD:1260},
     currencyRateData : {USD:10000000000, KRW:10985000000000, JPY:1165294691729.96, EUR:8018599354.72, CNY:61262617812.73, AUS:1146396443405, CAD:11284026707.76, NZD:12586507172.65},
     currencyUnitRight : {USD:"달러", KRW:"원", JPY:"엔", EUR:"유료", CNY:"위안", AUS:"달러", CAD:"달러", NZD:"달러"},
+    currencyMax : 10000,
 
     init:function(){
         this.changeNationPre();
         this.changeNationNxt();
-        this.stateNationPre = this.selectNation01.options[this.selectNation01.selectedIndex].getAttribute('data-unit');
-        this.stateNationNxt = this.selectNation02.options[this.selectNation02.selectedIndex].getAttribute('data-unit');
-
+        this.currencyInput02.value = 0;
+        this.currencyInput01.value = 0;
+        //this.stateNationPre = this.selectNation01.options[this.selectNation01.selectedIndex].getAttribute('data-unit');
+        //this.stateNationNxt = this.selectNation02.options[this.selectNation02.selectedIndex].getAttribute('data-unit');
     },
     nodeInit:function(){
         this.selectNation01 = document.getElementById("ecg_ifmt");
@@ -58,7 +59,6 @@ nhn.exchange.prototype = {
         this.flag = document.getElementsByClassName("flag");
         this.unitLeft = document.getElementsByClassName("nt_eng");
         this.unitright = document.getElementsByClassName("nb_txt");
-
      },
     attachEvent:function(){
         var that = this;
@@ -69,18 +69,17 @@ nhn.exchange.prototype = {
             that.changeNationNxt();
         });
 
-
         this.currencyInput01.addEventListener("keyup",function(){
-            that.isNumDot(event);
+            that.recentInputChecker = 0;
             that.changeNationPre();
             that.currencyInput02.value = Number(that.currnetCalc(that.stateNationPre, that.stateNationNxt, that.currencyInput01.value)).toLocaleString();
-            that.recentInputChecker = 0;
+            that.currencyInput01.value = Number(that.currencyInput01.value);
         });
         this.currencyInput02.addEventListener("keyup",function(){
-            that.isNumDot(event);
+            that.recentInputChecker = 1;
             that.changeNationNxt();
             that.currencyInput01.value = Number(that.currnetCalc(that.stateNationNxt, that.stateNationPre, that.currencyInput02.value)).toLocaleString();
-            that.recentInputChecker = 1;
+            that.currencyInput02.value = Number(that.currencyInput02.value);
         });
         this.currencyInput01.addEventListener("click",function(){
         });
@@ -135,25 +134,25 @@ nhn.exchange.prototype = {
     changeNationFlagNxt:function() {
         this.flag[1].setAttribute("class","flag "+(this.stateNationNxt).toLowerCase());
     },
+    maxRange:function(){
+
+    },
+    minRage:function(){
+
+    },
     currnetCalc : function(){
-        return (arguments[2]/(this.currencyRateData[arguments[0]])*(this.currencyRateData[arguments[1]])).toFixed(2);
+        if (arguments[2] === ""){ return 0;}
+        return (parseFloat(arguments[2])/parseFloat(this.currencyRateData[arguments[0]])*parseFloat(this.currencyRateData[arguments[1]])).toFixed(2);
     },
     isNumDot : function(event){
         ///console.log(event.keyCode);
         var ky = event.keyCode;
-        if ( !((ky<58 && ky>47) || (ky<106 && ky>95) || (ky==46 || ky==8) || (ky===190 || ky===110))){
+        if (!((ky<58 && ky>47) || (ky<106 && ky>95) || (ky==46 || ky==8) || (ky===190 || ky===110))){
             event.preventDefault();
         }
-    },
-    test : function(){
-        var reg = /\.\./g;
-        var data = "12345..6";
-
-        var newdata = reg.exec(data);
-        //console.log(newdata);
     }
 };
-
+var imsi;
 var execute = new nhn.exchange();
 
 
