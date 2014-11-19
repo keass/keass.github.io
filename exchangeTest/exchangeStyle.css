@@ -22,7 +22,7 @@
 .cs_exchangerate .flag.usd{background-position:0 -32px}
 .cs_exchangerate .flag.jpy{background-position:0 -64px}
 .cs_exchangerate .flag.cny{background-position:0 -96px}
-.cs_exchangerate .flag.aus{background-position:0 -128px}
+.cs_exchangerate .flag.aus{background-position:0 -128px} /* 호주 aus로 변경, 일부 삭제 */
 .cs_exchangerate .flag.cad{background-position:0 -192px}
 .cs_exchangerate .flag.eur{background-position:0 -320px}
 .cs_exchangerate .flag.nzd{background-position:-120px -256px}
@@ -99,7 +99,6 @@
 
 /* 기본 레이아웃 정리  */
 html, body { margin:0; padding:0; }
-
 .sctl, .scn {
     overflow: hidden;
     position: absolute;
@@ -108,7 +107,6 @@ html, body { margin:0; padding:0; }
     height: 1px;
     border-top: 2px solid #40b409;
 }
-
 .nc, hr, .js_hide, .display_n {
     display: none !important;
 }
