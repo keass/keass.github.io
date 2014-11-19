@@ -72,12 +72,14 @@ nhn.exchange.prototype = {
             that.changeNationPre();
             that.currencyInput02.value = that.regCommaOn(Number(that.currnetCalc(that.stateNationPre, that.stateNationNxt, that.regCommaOff(that.currencyInput01.value))).toFixed(2).toLocaleString());
             that.currencyInput01.value = that.regCommaOn(that.regCommaOff(that.currencyInput01.value));
+            if (this.value === "") { this.value ="0"; }
         });
         this.currencyInput02.addEventListener("keyup",function(){
             that.recentInputChecker = 1;
             that.changeNationNxt();
             that.currencyInput01.value = that.regCommaOn(Number(that.currnetCalc(that.stateNationNxt, that.stateNationPre, that.regCommaOff(that.currencyInput02.value))).toFixed(2).toLocaleString());
             that.currencyInput02.value = that.regCommaOn(that.regCommaOff(that.currencyInput02.value));
+            if (this.value === "") { this.value ="0"; }
         });
         this.currencyInput01.addEventListener("keydown",function(){
             that.leadingZeroCheck(that.currencyInput01);
