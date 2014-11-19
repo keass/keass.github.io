@@ -13,8 +13,8 @@
  // 3. 하나씩만 지우기
  // + 강제 0 입력시 단위에 00 표기 지우기
  //10. 자리수 쉼표 표시하기
+ // 2. 최고 수, >> html 에 maxlength 추가
 
- 2. 최고 수, 최소 수
  9. 셀렉티드 다시 적용시키기
  7. 0 이상일때 뒤에서 부터 입력, >> 마우스 땔 때  문자 길이 젤 뒤로 보내기 >> 키 하단 입력?
  11. 단위 우측 한글 표기
@@ -53,6 +53,9 @@ nhn.exchange.prototype = {
         this.currencyInput01 = document.getElementById("num");
         this.currencyInput02 = document.getElementById("num2");
 
+        this.currencyInput01.setAttribute("maxlength","16");
+        this.currencyInput02.setAttribute("maxlength","16");
+
         this.flag = document.getElementsByClassName("flag");
         this.unitLeft = document.getElementsByClassName("nt_eng");
         this.unitright = document.getElementsByClassName("nb_txt");
@@ -84,9 +87,12 @@ nhn.exchange.prototype = {
         });
 
         this.currencyInput01.addEventListener("keydown",function(){
+            that.leadingZeroCheck(that.currencyInput01);
             that.isNumDot(event);
+
         });
         this.currencyInput02.addEventListener("keydown",function(){
+            that.leadingZeroCheck(that.currencyInput02);
             that.isNumDot(event);
         });
     },
@@ -131,38 +137,30 @@ nhn.exchange.prototype = {
     changeNationKorUnitNxt:function(){
 
     },
+
     changeNationFlagPre:function() {
         this.flag[0].setAttribute("class", "flag "+(this.stateNationPre).toLowerCase());
     },
     changeNationFlagNxt:function() {
         this.flag[1].setAttribute("class","flag "+(this.stateNationNxt).toLowerCase());
     },
-    maxRange:function(){
 
+    leadingZeroCheck:function(arg){
+        if (arg.value[0] === "0") { arg.value = ""; }
     },
-    minRage:function(){
-
-    },
-    regCommaOn:function(n){
-        if( isNaN(n) ) {
-            return 0;
-        }
+    regCommaOn:function(arg){
         var reg = /(^[+-]?\d+)(\d{3})/;
-        n += '';
 
-        while ( reg.test(n) ) {
-            n = n.replace(reg, '$1' + ',' + '$2');
+        arg += '';
+        while ( reg.test(arg) ) {
+            arg = arg.replace(reg, '$1'+','+'$2');
+
         }
-        return n;
+        return arg;
     },
-    regCommaOff:function(n) {
-        n = String(n).replace(/\,/g,"");
-        if(isNaN(n)) {
-            return 0;
-        }else {
-            return n;
-            console.log(typeof n);
-        }
+    regCommaOff:function(arg) {
+        arg = String(arg).replace(/\,/g,"");
+        return arg;
     },
     currnetCalc : function(){
         if (arguments[2] === ""){ return 0;}
@@ -171,7 +169,7 @@ nhn.exchange.prototype = {
     isNumDot : function(event){
         ///console.log(event.keyCode);
         var ky = event.keyCode;
-        if (!((ky<58 && ky>47) || (ky<106 && ky>95) || (ky==46 || ky==8) || (ky===190 || ky===110))){
+        if (!((ky<58 && ky>47) || (ky<106 && ky>95) || (ky===46 || ky===8) || (ky===190 || ky===110))){
             event.preventDefault();
         }
     }
