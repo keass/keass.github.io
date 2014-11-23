@@ -3,6 +3,8 @@
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
       <excludeFolder url="file://$MODULE_DIR$/.idea" />
+      <excludeFolder url="file://$MODULE_DIR$/exchangeTest" />
+      <excludeFolder url="file://$MODULE_DIR$/imsi" />
       <excludeFolder url="file://$MODULE_DIR$/youtubelist" />
     </content>
     <orderEntry type="inheritedJdk" />
