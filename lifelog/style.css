@@ -26,7 +26,8 @@ label span {
   font-weight: bold;
   font-size: 12px;
   line-height: 50px;
-  font-family: dotum, sans-serif; }
+  font-family: dotum, sans-serif;
+  color: white; }
 
 label input[type="radio"] {
   width: 100%;
@@ -34,7 +35,7 @@ label input[type="radio"] {
   height: 0; }
 
 label input[type="radio"]:after {
-  background: #CECBC3;
+  background: #ccc;
   content: "";
   display: block;
   width: 100%;
@@ -47,6 +48,9 @@ label input[type="radio"]:checked:after {
   background: #152C2B; }
 
 li input {
+  color: white; }
+
+label input span {
   color: white; }
 
 ul {
@@ -63,9 +67,10 @@ body {
   position: relative; }
 
 .fullwidth {
-  height: 20px;
+  font-size: 20px;
   padding: 5px;
-  width: 100%; }
+  width: 100%;
+  background: #7D98A7; }
 
 .section {
   width: 100%;
@@ -94,6 +99,7 @@ body {
 
 .section03 #submit {
   height: 100%;
-  background: #036EBE; }
+  background: #036EBE;
+  color: white; }
 
 /*# sourceMappingURL=style.css.map */
