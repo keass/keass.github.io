@@ -35,7 +35,7 @@ label input[type="radio"] {
   height: 0; }
 
 label input[type="radio"]:after {
-  background: #ccc;
+  background: #444;
   content: "";
   display: block;
   width: 100%;
