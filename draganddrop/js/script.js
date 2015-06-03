@@ -14,6 +14,7 @@
 * */
 
 
+
 // 드래그 아이템이 1개인지 여러개인지 확인하고 각각 생성
 function MultiDragenv(a,b){
     var testa = document.getElementsByClassName(a);
