@@ -15,12 +15,13 @@
 
 
 // 드래그 아이템이 1개인지 여러개인지 확인하고 각각 생성
-function MultiDragenv(a,b){
-    var testa = document.getElementsByClassName(a);
-    var testb = document.getElementsByClassName(b);
-    if (testa[1] || testb[1]){
-        for(var i =0; i<testa.length; i++){
-            for (var j =0; j<testb.length; j++){
+function MultiDragenv(a, b) {
+    var testa = document.getElementsByClassName(a),
+        testb = document.getElementsByClassName(b);
+    if (testa[1] || testb[1]) {
+        var i = 0, j = 0;
+        for(i; i<testa.length; i+1) {
+            for (j; j<testb.length; j+1){
                 new Dragenv(testa[i],testb[j]);
             }
         }
@@ -54,8 +55,8 @@ Dragenv.prototype = {
                 var grabMoveY  = e.pageY - (a.clientHeight/2);
                 var grabMoveX  = e.pageX - (a.clientWidth/2);
 
-                var mouseNowY = e.pageY;
-                var mouseNowX = e.pageX;
+                //var mouseNowY = e.pageY;
+                //var mouseNowX = e.pageX;
 
                 //console.log(grabMoveX,grabMoveY,mouseNowX,mouseNowY);
 
@@ -169,7 +170,7 @@ Dragenv.prototype = {
 
         if (left < grabMoveX && grabMoveX < left+(b.clientWidth)) {
             if (top < grabMoveY && grabMoveY < top+(b.clientHeight)) {
-                console.log('ok');
+                //console.log('ok');
                 return true;
             }
         }
