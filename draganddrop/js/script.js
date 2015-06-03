@@ -14,6 +14,7 @@
 * */
 
 
+
 // 드래그 아이템이 1개인지 여러개인지 확인하고 각각 생성
 function MultiDragenv(a,b){
     var testa = document.getElementsByClassName(a);
@@ -54,8 +55,8 @@ Dragenv.prototype = {
                 var grabMoveY  = e.pageY - (a.clientHeight/2);
                 var grabMoveX  = e.pageX - (a.clientWidth/2);
 
-                var mouseNowY = e.pageY;
-                var mouseNowX = e.pageX;
+                //var mouseNowY = e.pageY;
+                //var mouseNowX = e.pageX;
 
                 //console.log(grabMoveX,grabMoveY,mouseNowX,mouseNowY);
 
