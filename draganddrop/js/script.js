@@ -13,11 +13,8 @@
 *   - 드래그A가 영역내로 와서 떨어지면 이벤트 2
 * */
 
-function Dragenv(a,b){
-    //this._init(a,b);
-    this.mouse(a,b);
-}
 
+// 드래그 아이템이 1개인지 여러개인지 확인하고 각각 생성
 function MultiDragenv(a,b){
     var testa = document.getElementsByClassName(a);
     var testb = document.getElementsByClassName(b);
@@ -25,7 +22,6 @@ function MultiDragenv(a,b){
         for(var i =0; i<testa.length; i++){
             for (var j =0; j<testb.length; j++){
                 new Dragenv(testa[i],testb[j]);
-                //console.log(testa[i],testb[j]);
             }
         }
     } else {
@@ -33,21 +29,16 @@ function MultiDragenv(a,b){
     }
 }
 
+function Dragenv(a,b){
+    //this._init(a,b);
+    this.mouse(a,b);
+}
+
 Dragenv.prototype = {
-    //_init:function(val1, val2) {
-    //    this.dragStartItem = val1;
-    //    this.dragEndItem = val2;
-    //},
     state:function(arg){
         var state1 = document.getElementById('state');
         state1.innerHTML = arg;
     },
-    //objGrab:this.dragStartItem[0],
-    //isMultiObject:function(){
-    //    if(this.dragStartItem[1]){
-    //        return true;
-    //    }
-    //},
     mouse:function(a,b){
         var _self = this,
             mouseDown = false,
@@ -62,24 +53,22 @@ Dragenv.prototype = {
 
                 var grabMoveY  = e.pageY - (a.clientHeight/2);
                 var grabMoveX  = e.pageX - (a.clientWidth/2);
-                //console.log(a.clientHeight, a.clientWidth);
 
                 var mouseNowY = e.pageY;
                 var mouseNowX = e.pageX;
 
+                //console.log(grabMoveX,grabMoveY,mouseNowX,mouseNowY);
+
                 _self.objectMove(grabMoveY,grabMoveX);
-                _self.dropCheker(b,mouseNowY,mouseNowX);
-                //console.log(grabMoveY,grabMoveX,mouseNowY,mouseNowX);
+                _self.dropCheker(b,grabMoveY,grabMoveX);
             }
         });
-        a.addEventListener('mousedown', function(e){
-            //console.log(this);
+        a.addEventListener('mousedown', function(){
             mouseDown = true;
 
             if(mouseMove) {
                 mouseGrab = true;
                 _self.objectDouble(this);
-                //console.log(this);
             }
         });
         document.addEventListener('mouseup', function(e){
@@ -87,10 +76,9 @@ Dragenv.prototype = {
                 d = e.pageX;
 
             if (mouseGrab && !mouseHover){
-                _self.oDouble.parentNode.removeChild(_self.oDouble);
+                _self.doubleWrapper.parentNode.removeChild(_self.doubleWrapper);
             }
             if(mouseGrab && _self.dropCheker(b,c,d)){
-                //console.log(a.getAttribute('class'));
                 _self.dropACtion(a.getAttribute('class'));
             }
             mouseDown = false;
@@ -99,22 +87,89 @@ Dragenv.prototype = {
     },
     // 드래그 시작하면 오브젝트 복제
     objectDouble:function(a){
+        //console.log(this,'복제하려는데this는 뭔가용');
+        this.doubleWrapper = document.createElement('div');
+        this.doubleWrapper.setAttribute('style','position: absolute; top:0; left:0; right:0; bottom:0;');
+        document.body.appendChild(this.doubleWrapper);
+        //a.parentNode.appendChild();
         this.oDouble = a.cloneNode(true);
         //console.log(this.oDouble);
         this.oDouble.setAttribute('style','display:none;');
-        a.parentNode.appendChild(this.oDouble);
+        //a.parentNode.appendChild(this.oDouble);
+        //console.log(doubleWrapper);
+        this.doubleWrapper.appendChild(this.oDouble);
+        //document.body.appendChild(this.oDouble);
+
     },
     // 드래그 포지션 top left 수치로 복제 오브젝트 마우스에 붙이기
     objectMove:function(ina,inb){
         var style = "position:absolute; top:"+ina+"px; left:"+inb+"px; opacity:0.5; margin:0; cursor:pointer;";
+        //var old = this.oDouble.getAttribute('style');
         this.oDouble.setAttribute('style',style);
         //console.log(style);
     },
+    //// 상위 오브젝트 마진 있어?
+    //parentMarginChecker:function(arg){
+    //    var fullword = arg.parentNode.getAttribute('style');
+    //    if(fullword.indexOf('margin') === 0){
+    //        //console.log(fullword.indexOf('margin'));
+    //        return true;
+    //    }
+    //},
+    // 상위 오브젝트 렐러티브?
+    parentRelativeChecker:function(arg){
+        if (arg.parentNode.getAttribute('style')){
+            var fullword = arg.parentNode.getAttribute('style');
+            //console.log(fullword, fullword.indexOf('position'));
+            if(fullword.indexOf('position') === 0){
+                //console.log('relative 있어');
+                return true;
+            }
+        }
+    },
     // 드랍 영역 들어왔는지 체크
-    dropCheker:function(b,mouseNowY,mouseNowX){
-        if (b.offsetLeft < mouseNowX && mouseNowX < b.offsetLeft+(b.clientWidth)) {
-            if (b.offsetTop < mouseNowY && mouseNowY < b.offsetTop+(b.clientHeight)) {
-                //console.log('ok');
+    dropCheker:function(b,grabMoveY,grabMoveX){
+
+        var top = b.offsetTop,
+            left = b.offsetLeft;
+
+        //if(b.parentNode.offsetTop || b.parentNode.offsetLeft) { //상위에 relative가 있을 때
+        //    top = b.parentNode.offsetTop + b.offsetTop;
+        //    left = b.parentNode.offsetLeft + b.offsetLeft;
+        //}
+        //console.log('렐러',this.parentRelativeChecker(b));
+        if (this.parentRelativeChecker(b)){
+            top = b.parentNode.offsetTop + b.offsetTop;
+            left = b.parentNode.offsetLeft + b.offsetLeft;
+        }
+        //console.log('마진',this.parentMarginChecker(b));
+        //if (this.parentMarginChecker(b)){ // 상위에 마진이 있을때
+        //    top = b.offsetTop;
+        //    left = b.offsetLeft;
+        //}
+        //if(b.parentNode.offsetTop || b.parentNode.offsetLeft) { //상위에 margin 등이 있을때?
+        //    top = b.parentNode.offsetTop + b.offsetTop;
+        //    left = b.parentNode.offsetLeft + b.offsetLeft;
+        //}
+
+
+        //console.log(b.parentNode.offsetTop, b.parentNode.offsetLeft, b.offsetTop, b.offsetLeft);
+
+
+        //// 도착하는 위치 표시
+        //var newobj = document.createElement('div'),
+        //    objwidth = b.clientWidth,
+        //    objheight = b.clientHeight,
+        //    style = "position:absolute; background:red; width:"+objwidth+"px; height:"+objheight+"px; top:"+top+"px; left:"+left+"px; ";
+        //
+        //newobj.setAttribute('style',style);
+        //document.body.appendChild(newobj);
+
+        //console.log(b.offsetTop, b.offsetLeft, top, left);
+
+        if (left < grabMoveX && grabMoveX < left+(b.clientWidth)) {
+            if (top < grabMoveY && grabMoveY < top+(b.clientHeight)) {
+                console.log('ok');
                 return true;
             }
         }
@@ -122,28 +177,11 @@ Dragenv.prototype = {
     // 드랍 영역 들어왔고, 마우스를 떼면 작동
     dropACtion:function(data){
         this.state(data);
-    },
+    }
 };
 
-//var dragtest = new Dragenv('obj1','obj2');
 
-var dragtest = new MultiDragenv('obj1','obj2');
+new MultiDragenv('obj1','obj2');
 
-//var dragtest2 = new Dragenv('obj1-2','obj2-2');
-var dragtest3 = new MultiDragenv('obj1-2','obj2-2');
-//var dragtest4 = new MultiDragenv('obj1','obj2');
+new MultiDragenv('obj1-2','obj2-2');
 
-
-/*
-function test(a,b){
-    var dragStartItem = document.getElementsByClassName(a);
-    var dragItem = [];
-
-        for (var i=0; i< dragStartItem.length; i++){
-            dragItem[i] = dragStartItem[i];
-        }
-        console.log(dragItem);
-}
-test('obj1','obj2');
-test('obj1-2','obj2-2');
-*/

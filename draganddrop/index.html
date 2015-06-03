@@ -13,14 +13,17 @@
 		.green { margin: 10px 0 30px 10px; background:green;}
 		.purple { margin: 50px 0 50px 10px; background:purple;}
 		.yellow { top: 200px; left:100px; background:yellow; position:absolute; }
-		.black { margin: 0 0 150px 10px; background:black;}
+		.black { margin: 0 0 0 10px; background:black;}
 
 		.ing { background:#ccc;}
 		.obj2 { background:none; border:2px dotted #000; float:right;}
 		.obj2-2 { background:none; border:2px dotted #000; float:left; margin-left:180px;}
 		.obj2.over { padding:10px; }
 
-		#state { position:absolute; top:30px; left: 470px;}
+		.drag { display:block; width:50px; height:50px; background:#004790; }
+		.drop { display:block; width:50px; height:50px; background:#0000cc; margin:10px 30px;}
+
+		#state { position:fixed; top:30px; left: 470px; z-index:100;}
 
 	</style>
 </head>
@@ -28,12 +31,11 @@
 	<h1>Drag & Drop Component</h1><div id="state">
 
 	</div>
-	<div class="stage">
+	<div class="stage" style="position:relative;">
 		<div class="obj1"></div>
 		<div class="obj2"></div>
 		<div class="clear"></div>
 	</div>
-
 
 		<div class="obj1-2 red"></div>
 		<div class="obj1-2 green"></div>
@@ -42,6 +44,11 @@
 		<div class="obj1-2 yellow"></div>
 		<div class="obj1-2 black"></div>
 		<div class="obj2-2"></div>
+
+<div style="margin:0 0 0 100px; background:#ccc; float:left; clear:both;">
+	<div class="drag"></div>
+	<div class="drop"></div>
+</div>
 
 
 <!--
@@ -68,6 +75,9 @@
 	<a href="http://demos.mattwest.io/drag-and-drop/">http://demos.mattwest.io/drag-and-drop/</a><br/>
 	<a href="http://www.w3schools.com/html/html5_draganddrop.asp">http://www.w3schools.com/html/html5_draganddrop.asp</a>
 	<script src="js/script.js"></script>
+	<script>
+		new MultiDragenv('drag','drop');
+	</script>
 	</body>
 </html>
 
