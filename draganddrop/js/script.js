@@ -55,8 +55,8 @@ Dragenv.prototype = {
                 var grabMoveY  = e.pageY - (a.clientHeight/2);
                 var grabMoveX  = e.pageX - (a.clientWidth/2);
 
-                var mouseNowY = e.pageY;
-                var mouseNowX = e.pageX;
+                //var mouseNowY = e.pageY;
+                //var mouseNowX = e.pageX;
 
                 //console.log(grabMoveX,grabMoveY,mouseNowX,mouseNowY);
 
