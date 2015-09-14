@@ -46,6 +46,8 @@ label input[type="radio"]:checked:after {
 
 .section02 label input[type="radio"]:checked:after {
   background: #152C2B; }
+.section03 label input[type="radio"]:checked:after {
+  background: #036EBE; }
 
 li input {
   color: white; }
@@ -95,11 +97,29 @@ body {
   height: 16%;
   position: absolute;
   bottom: 0;
+  left:0; right:0;
   top: auto; }
 
 .section03 #submit {
-  height: 100%;
+  height: 60%;
   background: #036EBE;
   color: white; }
+
+.section03 .ss-choice-item {
+  width:40%;
+}
+.section03 .ss-choice-item:first-child {
+  width:60%;
+}
+.section03 #ss-submit {
+  margin:20px 0 0 0 ;
+   width:100%;
+  padding:20px 0;
+  border:0;
+  display:inline-block;
+   background: #036EBE;
+   color: white; }
+
+
 
 /*# sourceMappingURL=style.css.map */
